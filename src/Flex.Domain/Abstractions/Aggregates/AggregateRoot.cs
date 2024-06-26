@@ -1,4 +1,4 @@
-﻿using Flex.Contract.Abstractions;
+﻿using Flex.Contract.Abstractions.Message;
 using Flex.Domain.Abstractions.Entities;
 
 namespace Flex.Domain.Abstractions.Aggregates

@@ -1,6 +1,6 @@
 ﻿using MassTransit;
 
-namespace Flex.Contract.Abstractions
+namespace Flex.Contract.Abstractions.Message
 {
     [ExcludeFromTopology]
     public interface IDomainEvent
