@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Flex.Domain.Entities.Account;
 using Flex.Domain.Entities.Identity;
-using Action = DistributedSystem.Domain.Entities.Identity.Action;
+using Action = Flex.Domain.Entities.Identity.Action;
 
 namespace Flex.Persistence
 {
