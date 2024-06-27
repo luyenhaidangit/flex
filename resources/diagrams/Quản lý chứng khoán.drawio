@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-06-27T03:08:59.551Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="Xcvd0yjaAXw-w3pLFZJV" version="24.6.3" type="github" pages="5">
+<mxfile host="app.diagrams.net" modified="2024-06-27T03:09:13.078Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="NlnIEL3crpt0CXgvaLrj" version="24.6.3" type="github" pages="5">
   <diagram name="Quy trình mở tài khoản" id="_sXcY7eKj9PjwHy8QgXG">
     <mxGraphModel dx="1120" dy="460" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" math="0" shadow="0">
       <root>
@@ -245,7 +245,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="7c-61QYpQ-M-fPIgPDea-54" value="Quy trình mở tài khoản" style="swimlane;whiteSpace=wrap;html=1;startSize=23;" vertex="1" parent="1">
+        <mxCell id="7c-61QYpQ-M-fPIgPDea-54" value="Quy trình mở tài khoản hehe" style="swimlane;whiteSpace=wrap;html=1;startSize=23;" vertex="1" parent="1">
           <mxGeometry x="130" y="84" width="990" height="170" as="geometry" />
         </mxCell>
         <mxCell id="7c-61QYpQ-M-fPIgPDea-55" value="Khách hàng" style="swimlane;horizontal=0;whiteSpace=wrap;html=1;" vertex="1" parent="7c-61QYpQ-M-fPIgPDea-54">
