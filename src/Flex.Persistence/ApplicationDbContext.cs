@@ -1,5 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Flex.Domain.Entities.Account;
+using Flex.Domain.Entities.Identity;
+using Action = DistributedSystem.Domain.Entities.Identity.Action;
 
 namespace Flex.Persistence
 {
@@ -13,6 +15,12 @@ namespace Flex.Persistence
         {
             builder.ApplyConfigurationsFromAssembly(AssemblyReference.Assembly);
         }
+
+        public DbSet<AppUser> AppUses { get; set; }
+        public DbSet<Action> Actions { get; set; }
+        public DbSet<Function> Functions { get; set; }
+        public DbSet<ActionInFunction> ActionInFunctions { get; set; }
+        public DbSet<Permission> Permissions { get; set; }
 
         public DbSet<Cfmast> Cfmasts { get; set; }
     }

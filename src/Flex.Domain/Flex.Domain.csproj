@@ -7,7 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Entities\Security\" />
+    <Compile Remove="Entities\Security\**" />
+    <EmbeddedResource Remove="Entities\Security\**" />
+    <None Remove="Entities\Security\**" />
   </ItemGroup>
 
   <ItemGroup>
