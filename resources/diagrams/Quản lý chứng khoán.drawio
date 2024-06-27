@@ -1,4 +1,105 @@
-<mxfile host="app.diagrams.net" modified="2024-06-27T03:09:13.078Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="NlnIEL3crpt0CXgvaLrj" version="24.6.3" type="github" pages="5">
+<mxfile host="app.diagrams.net" modified="2024-06-27T03:54:32.315Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="-OyUCg-B-TQXmECKZzfv" version="24.6.3" type="github" pages="5">
+  <diagram name="Usecase tổng quát quản lý chứng khoán" id="QNadeRbJTOHaqkOONaWr">
+    <mxGraphModel dx="1120" dy="460" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="3WoOFCynEDcgwb8osIfW-1" value="Admin" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="360" y="260" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="3WoOFCynEDcgwb8osIfW-2" value="Lưu ký chứng khoán" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="585" y="40" width="190" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="3WoOFCynEDcgwb8osIfW-3" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="3WoOFCynEDcgwb8osIfW-1" target="3WoOFCynEDcgwb8osIfW-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="600" y="405" as="sourcePoint" />
+            <mxPoint x="783" y="465" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3WoOFCynEDcgwb8osIfW-5" value="Rút lưu ký chứng khoán" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="585" y="170" width="190" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="3WoOFCynEDcgwb8osIfW-6" value="Chuyển khoản chứng khoán" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="585" y="280" width="190" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="3WoOFCynEDcgwb8osIfW-7" value="Nhận chuyển khoản chứng khoán" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="585" y="390" width="190" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="3WoOFCynEDcgwb8osIfW-8" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="3WoOFCynEDcgwb8osIfW-1" target="3WoOFCynEDcgwb8osIfW-5">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="380" y="290" as="sourcePoint" />
+            <mxPoint x="646" y="116" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3WoOFCynEDcgwb8osIfW-9" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" target="3WoOFCynEDcgwb8osIfW-6">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="380" y="290" as="sourcePoint" />
+            <mxPoint x="595" y="215" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3WoOFCynEDcgwb8osIfW-10" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.021;entryY=0.414;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="3WoOFCynEDcgwb8osIfW-1" target="3WoOFCynEDcgwb8osIfW-7">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="300" as="sourcePoint" />
+            <mxPoint x="597" y="317" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3WoOFCynEDcgwb8osIfW-11" value="Phong tỏa chứng khoán" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="585" y="510" width="190" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="3WoOFCynEDcgwb8osIfW-12" value="Giải tỏa chứng khoán" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="585" y="630" width="190" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="3WoOFCynEDcgwb8osIfW-13" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="3WoOFCynEDcgwb8osIfW-1" target="3WoOFCynEDcgwb8osIfW-11">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="375" y="300" as="sourcePoint" />
+            <mxPoint x="599" y="429" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3WoOFCynEDcgwb8osIfW-14" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.047;entryY=0.3;entryDx=0;entryDy=0;exitX=0.5;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryPerimeter=0;" edge="1" parent="1" source="3WoOFCynEDcgwb8osIfW-1" target="3WoOFCynEDcgwb8osIfW-12">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="300" as="sourcePoint" />
+            <mxPoint x="595" y="555" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3WoOFCynEDcgwb8osIfW-15" value="Chuyển khoản chứng khoán&lt;br&gt;&amp;nbsp;nội bộ" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="900" y="110" width="190" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="3WoOFCynEDcgwb8osIfW-16" value="Chuyển khoản chứng khoán&lt;br&gt;&amp;nbsp;sang tài khoản TLLK khác" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="910" y="230" width="190" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="3WoOFCynEDcgwb8osIfW-17" value="Chuyển khoản chứng khoán&lt;br&gt;&amp;nbsp;theo lô lẻ" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="910" y="350" width="190" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="3WoOFCynEDcgwb8osIfW-18" value="Chuyển khoản chứng khoán&lt;br&gt;&amp;nbsp;giữa 2 TKLK cấp 2" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="910" y="470" width="190" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="3WoOFCynEDcgwb8osIfW-19" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="3WoOFCynEDcgwb8osIfW-6" target="3WoOFCynEDcgwb8osIfW-15">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="385" y="300" as="sourcePoint" />
+            <mxPoint x="646" y="116" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3WoOFCynEDcgwb8osIfW-20" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="3WoOFCynEDcgwb8osIfW-6" target="3WoOFCynEDcgwb8osIfW-16">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="774" y="308" as="sourcePoint" />
+            <mxPoint x="910" y="155" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3WoOFCynEDcgwb8osIfW-21" value="" style="endArrow=classic;html=1;rounded=0;entryX=-0.011;entryY=0.357;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="3WoOFCynEDcgwb8osIfW-6" target="3WoOFCynEDcgwb8osIfW-17">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="780" y="310" as="sourcePoint" />
+            <mxPoint x="920" y="275" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3WoOFCynEDcgwb8osIfW-22" value="" style="endArrow=classic;html=1;rounded=0;entryX=-0.011;entryY=0.357;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="3WoOFCynEDcgwb8osIfW-6" target="3WoOFCynEDcgwb8osIfW-18">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="785" y="325" as="sourcePoint" />
+            <mxPoint x="918" y="385" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
   <diagram name="Quy trình mở tài khoản" id="_sXcY7eKj9PjwHy8QgXG">
     <mxGraphModel dx="1120" dy="460" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" math="0" shadow="0">
       <root>
@@ -649,14 +750,6 @@
             <mxPoint x="500" y="290" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-      </root>
-    </mxGraphModel>
-  </diagram>
-  <diagram name="Trang-5" id="QNadeRbJTOHaqkOONaWr">
-    <mxGraphModel dx="1120" dy="460" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" math="0" shadow="0">
-      <root>
-        <mxCell id="0" />
-        <mxCell id="1" parent="0" />
       </root>
     </mxGraphModel>
   </diagram>
