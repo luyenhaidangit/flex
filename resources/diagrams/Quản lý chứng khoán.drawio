@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-06-27T04:39:26.372Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="-Vx7TAsIUonwApxZA7Jd" version="24.6.3" type="github" pages="5">
+<mxfile host="app.diagrams.net" modified="2024-06-27T04:43:16.624Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="CpRKFvX5KH94gUX5dq8w" version="24.6.3" type="github" pages="5">
   <diagram name="Usecase tổng quát quản lý chứng khoán" id="QNadeRbJTOHaqkOONaWr">
     <mxGraphModel dx="1120" dy="460" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" math="0" shadow="0">
       <root>
@@ -106,7 +106,7 @@
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="7c-61QYpQ-M-fPIgPDea-1" value="Công ty chứng khoán" style="swimlane;horizontal=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="129" y="254" width="991" height="1106" as="geometry">
+          <mxGeometry x="129" y="254" width="991" height="786" as="geometry">
             <mxRectangle x="230" y="690" width="40" height="150" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
@@ -153,13 +153,14 @@
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="310" y="866" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="301" y="891" />
+              <mxPoint x="301" y="666" />
+              <mxPoint x="511" y="666" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="7c-61QYpQ-M-fPIgPDea-22" value="Auto" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="7c-61QYpQ-M-fPIgPDea-20" vertex="1" connectable="0">
           <mxGeometry x="0.5195" y="-2" relative="1" as="geometry">
-            <mxPoint x="-70" y="-167" as="offset" />
+            <mxPoint x="-112" y="-172" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="7c-61QYpQ-M-fPIgPDea-23" value="Điện MT544&lt;br&gt;chấp nhận" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="7c-61QYpQ-M-fPIgPDea-20" vertex="1" connectable="0">
@@ -174,10 +175,10 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="7c-61QYpQ-M-fPIgPDea-31" value="Hoàn tất lưu ký&lt;br&gt;2246" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" parent="7c-61QYpQ-M-fPIgPDea-1" vertex="1">
-          <mxGeometry x="531" y="866" width="140" height="50" as="geometry" />
+          <mxGeometry x="511" y="636" width="140" height="50" as="geometry" />
         </mxCell>
         <mxCell id="7c-61QYpQ-M-fPIgPDea-32" value="End" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;fillColor=#e51400;fontColor=#ffffff;strokeColor=#B20000;" parent="7c-61QYpQ-M-fPIgPDea-1" vertex="1">
-          <mxGeometry x="811" y="866" width="140" height="50" as="geometry" />
+          <mxGeometry x="761" y="636" width="140" height="50" as="geometry" />
         </mxCell>
         <mxCell id="7c-61QYpQ-M-fPIgPDea-46" value="&lt;span style=&quot;font-size: 10px;&quot;&gt;&lt;b&gt;Thông tin khách hàng&lt;br&gt;111001&lt;/b&gt;&lt;/span&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="7c-61QYpQ-M-fPIgPDea-1" connectable="0" vertex="1">
           <mxGeometry x="141" y="196" as="geometry">
@@ -209,8 +210,31 @@
             <mxPoint x="16" y="-3" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="kVMyV8-QE21ikusKF1jp-16" value="Yêu cầu từ chối lưu ký chứng khoán VSE2230" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" vertex="1" parent="7c-61QYpQ-M-fPIgPDea-1">
+        <mxCell id="kVMyV8-QE21ikusKF1jp-16" value="Yêu cầu từ chối lưu ký chứng khoán VSE2231" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" vertex="1" parent="7c-61QYpQ-M-fPIgPDea-1">
           <mxGeometry x="621" y="126" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="kVMyV8-QE21ikusKF1jp-22" value="Yêu cầu từ chối lưu ký chứng khoán VSE2231" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" vertex="1" parent="7c-61QYpQ-M-fPIgPDea-1">
+          <mxGeometry x="621" y="26" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="kVMyV8-QE21ikusKF1jp-24" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="7c-61QYpQ-M-fPIgPDea-1" source="kVMyV8-QE21ikusKF1jp-2" target="kVMyV8-QE21ikusKF1jp-22">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="421" y="176" as="sourcePoint" />
+            <mxPoint x="471" y="126" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="656" y="136" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kVMyV8-QE21ikusKF1jp-25" value="NHLK từ chối lưu ký" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="kVMyV8-QE21ikusKF1jp-24">
+          <mxGeometry x="-0.5955" y="3" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kVMyV8-QE21ikusKF1jp-27" value="" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="7c-61QYpQ-M-fPIgPDea-1" source="kVMyV8-QE21ikusKF1jp-22" target="kVMyV8-QE21ikusKF1jp-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="421" y="176" as="sourcePoint" />
+            <mxPoint x="471" y="126" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="7c-61QYpQ-M-fPIgPDea-54" value="Lưu ký chứng khoán" style="swimlane;whiteSpace=wrap;html=1;startSize=23;" parent="1" vertex="1">
           <mxGeometry x="130" y="84" width="990" height="170" as="geometry" />
