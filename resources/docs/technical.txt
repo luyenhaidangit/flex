@@ -4,3 +4,9 @@
 - Enrichment
 - Configurability
 - Asynchronous Logging
+2. Carter (not use)
+- Define module
+- Route Handling
+- Middleware 
+- Model Binding
+- Response Handling
