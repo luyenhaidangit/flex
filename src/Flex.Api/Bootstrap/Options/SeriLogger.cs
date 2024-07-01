@@ -17,12 +17,9 @@ namespace Flex.Api.Bootstrap.Options
                 //.Enrich.WithThreadId()
                 //.Enrich.WithProperty("Environment", environmentName)
                 //.Enrich.WithProperty("Application", applicationName)
-                .WriteTo.Console(outputTemplate:
-                    "[{Timestamp:HH:mm:ss} {Level}] {SourceContext}{NewLine}{Message:lj}{NewLine}{Exception}{NewLine}")
-                .WriteTo.Debug(outputTemplate:
-                    "[{Timestamp:HH:mm:ss} {Level}] {SourceContext}{NewLine}{Message:lj}{NewLine}{Exception}{NewLine}");
-                //.WriteTo.File("logs/log-.txt", rollingInterval: RollingInterval.Day, outputTemplate:
-                //    "[{Timestamp:HH:mm:ss} {Level}] {SourceContext}{NewLine}{Message:lj}{NewLine}{Exception}{NewLine}");
+                .WriteTo.Async(a => a.Console(outputTemplate: "[{Timestamp:HH:mm:ss} {Level}] {SourceContext}{NewLine}{Message:lj}{NewLine}{Exception}{NewLine}"))
+                .WriteTo.Async(a => a.Debug(outputTemplate: "[{Timestamp:HH:mm:ss} {Level}] {SourceContext}{NewLine}{Message:lj}{NewLine}{Exception}{NewLine}"));
+                //.WriteTo.Async(a => a.File("logs/log-.txt", rollingInterval: RollingInterval.Day, outputTemplate: "[{Timestamp:HH:mm:ss} {Level}] {SourceContext}{NewLine}{Message:lj}{NewLine}{Exception}{NewLine}"))
         };
     }
 }

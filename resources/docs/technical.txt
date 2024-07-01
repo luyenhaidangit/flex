@@ -1,0 +1,6 @@
+1. Serilog
+- Structured Logging
+- Multiple Sinks
+- Enrichment
+- Configurability
+- Asynchronous Logging
