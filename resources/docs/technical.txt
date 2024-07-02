@@ -10,3 +10,9 @@
 - Middleware 
 - Model Binding
 - Response Handling
+3. Swagger
+- Interactive API Documentation
+- Automatic Generation
+- API Versioning
+- OAuth2 Integration
+- Custom Annotations

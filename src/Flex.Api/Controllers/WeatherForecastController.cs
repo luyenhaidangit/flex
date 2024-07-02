@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Swashbuckle.AspNetCore.Annotations;
 
 namespace Flex.Api.Controllers
 {
@@ -19,6 +20,8 @@ namespace Flex.Api.Controllers
         }
 
         [HttpGet(Name = "GetWeatherForecast")]
+        [SwaggerOperation(Summary = "Get weather forecast", Description = "Retrieve weather forecast data for the next 5 days")]
+        [SwaggerResponse(200, "Returns the weather forecast", typeof(IEnumerable<WeatherForecast>))]
         public IEnumerable<WeatherForecast> Get()
         {
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast

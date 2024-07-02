@@ -1,5 +1,6 @@
 using Serilog;
 using Flex.Api.Bootstrap.Options;
+using Flex.Api.Bootstrap.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,6 +8,9 @@ try
 {
     // Logging
     builder.Host.UseSerilog(SeriLogger.Configure);
+
+    // Swagger
+    builder.Services.AddSwagger();
 
     // Add services to the container.
 
