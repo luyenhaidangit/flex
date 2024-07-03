@@ -1,7 +1,7 @@
 using Serilog;
+using Asp.Versioning;
 using Flex.Api.Bootstrap.Options;
 using Flex.Api.Bootstrap.Extensions;
-using Asp.Versioning;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,17 +19,7 @@ try
     builder.Services.AddControllers();
 
     // Versioning
-    builder.Services.AddApiVersioning(options =>
-    {
-        options.DefaultApiVersion = new ApiVersion(1, 0);
-        options.AssumeDefaultVersionWhenUnspecified = true;
-        options.ReportApiVersions = true;
-    })
-    .AddApiExplorer(options =>
-    {
-        options.GroupNameFormat = "'v'VVV";
-        options.SubstituteApiVersionInUrl = true;
-    });
+    builder.Services.AddApiVersioningCore();
 
     // Auth
     builder.Services.AddJwtAuthentication(builder.Configuration);

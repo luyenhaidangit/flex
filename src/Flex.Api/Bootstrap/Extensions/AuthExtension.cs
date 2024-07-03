@@ -1,13 +1,13 @@
 ﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
-using Flex.Api.Bootstrap.Options;
 using System.Text;
+using Flex.Api.Bootstrap.Options;
 
 namespace Flex.Api.Bootstrap.Extensions
 {
     public static class AuthExtension
     {
-        public static void AddJwtAuthentication(this IServiceCollection services, IConfiguration configuration)
+        public static IServiceCollection AddJwtAuthentication(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddAuthentication(options =>
             {
@@ -57,6 +57,8 @@ namespace Flex.Api.Bootstrap.Extensions
 
                 //o.EventsType = typeof(CustomJwtBearerEvents);
             });
+
+            return services;
         }
     }
 }

@@ -5,7 +5,7 @@ namespace Flex.Api.Bootstrap.Extensions
 {
     public static class SwaggerExtension
     {
-        public static void AddSwagger(this IServiceCollection services)
+        public static IServiceCollection AddSwagger(this IServiceCollection services)
         {
             services.AddSwaggerGen(c =>
             {
@@ -34,6 +34,8 @@ namespace Flex.Api.Bootstrap.Extensions
             services.AddSwaggerGenNewtonsoftSupport();
 
             services.AddFluentValidationRulesToSwagger();
+
+            return services;
         }
     }
 }
