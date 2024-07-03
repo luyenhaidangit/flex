@@ -7,12 +7,16 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="UserCases\V1\Account\Login\" />
+    <PackageReference Include="MediatR" Version="12.3.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="8.0.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="MediatR" Version="12.3.0" />
-    <PackageReference Include="Microsoft.Extensions.Logging" Version="8.0.0" />
+    <ProjectReference Include="..\Flex.Contract\Flex.Contract.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="UserCases\V1\Account\Login\Queries\" />
   </ItemGroup>
 
 </Project>

@@ -1,5 +1,4 @@
 using Serilog;
-using Asp.Versioning;
 using Flex.Api.Bootstrap.Options;
 using Flex.Api.Bootstrap.Extensions;
 
@@ -23,6 +22,9 @@ try
 
     // Auth
     builder.Services.AddJwtAuthentication(builder.Configuration);
+
+    // MediaR
+    builder.Services.AddMediaR();
 
     var app = builder.Build();
 
