@@ -9,16 +9,14 @@ try
     // Logging
     builder.Host.UseSerilog(SeriLogger.Configure);
 
+    // Add services to the container.
     // Swagger
+    builder.Services.AddEndpointsApiExplorer();
     builder.Services.AddSwagger();
 
-    // Add services to the container.
-
+    // Controller
     builder.Services.AddControllers();
-    // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-    builder.Services.AddEndpointsApiExplorer();
-    builder.Services.AddSwaggerGen();
-
+    
     var app = builder.Build();
 
     Log.Information("Application starting up");

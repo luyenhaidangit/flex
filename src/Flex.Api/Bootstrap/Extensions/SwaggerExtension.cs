@@ -1,8 +1,4 @@
-﻿using Microsoft.Extensions.Options;
-using Microsoft.OpenApi.Models;
-using Swashbuckle.AspNetCore.SwaggerGen;
-
-namespace Flex.Api.Bootstrap.Extensions
+﻿namespace Flex.Api.Bootstrap.Extensions
 {
     public static class SwaggerExtension
     {
@@ -14,6 +10,10 @@ namespace Flex.Api.Bootstrap.Extensions
 
                 c.EnableAnnotations();
             });
+
+            services.AddSwaggerGenNewtonsoftSupport();
+
+            //services.AddFluentValidationRulesToSwagger();
         }
 
     }
