@@ -1,4 +1,5 @@
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Swashbuckle.AspNetCore.Annotations;
 
 namespace Flex.Api.Controllers
@@ -7,17 +8,34 @@ namespace Flex.Api.Controllers
     [Route("[controller]")]
     public class WeatherForecastController : ControllerBase
     {
+        private readonly ApplicationDbContext _context;
+
+        public WeatherForecastController(ApplicationDbContext context)
+        {
+            _context = context;
+        }
+
+        [HttpGet("checkdatabase")]
+        public async Task<IActionResult> CheckDatabaseConnection()
+        {
+            try
+            {
+                // Thực hiện một truy vấn đơn giản để kiểm tra kết nối
+                await _context.Database.ExecuteSqlRawAsync("SELECT 1 FROM DUAL");
+                return Ok("Database connection is successful.");
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Database connection failed: {ex.Message}");
+            }
+        }
+
         private static readonly string[] Summaries = new[]
         {
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
         };
 
         private readonly ILogger<WeatherForecastController> _logger;
-
-        public WeatherForecastController(ILogger<WeatherForecastController> logger)
-        {
-            _logger = logger;
-        }
 
         [HttpGet(Name = "GetWeatherForecast")]
         [SwaggerOperation(Summary = "Get weather forecast", Description = "Retrieve weather forecast data for the next 5 days")]

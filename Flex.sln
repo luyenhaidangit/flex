@@ -15,8 +15,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Flex.Infrastructure", "src\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Flex.Api", "src\Flex.Api\Flex.Api.csproj", "{C9478902-44D0-42F7-96ED-C5EFF9F47839}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flex.Presentation", "src\Flex.Presentation\Flex.Presentation.csproj", "{01172B89-3660-428C-A83A-B1308CA960BF}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,10 +45,6 @@ Global
 		{C9478902-44D0-42F7-96ED-C5EFF9F47839}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C9478902-44D0-42F7-96ED-C5EFF9F47839}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C9478902-44D0-42F7-96ED-C5EFF9F47839}.Release|Any CPU.Build.0 = Release|Any CPU
-		{01172B89-3660-428C-A83A-B1308CA960BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{01172B89-3660-428C-A83A-B1308CA960BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{01172B89-3660-428C-A83A-B1308CA960BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{01172B89-3660-428C-A83A-B1308CA960BF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

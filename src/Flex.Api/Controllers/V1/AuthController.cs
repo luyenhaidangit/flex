@@ -1,7 +1,6 @@
 ﻿using Asp.Versioning;
-using Flex.Application.UserCases.V1.Account.Login.Commands;
+using Flex.Application.UserCases.V1.Account.Login;
 using MediatR;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Flex.Api.Controllers.V1

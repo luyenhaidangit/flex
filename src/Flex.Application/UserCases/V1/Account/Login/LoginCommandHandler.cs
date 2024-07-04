@@ -1,10 +1,9 @@
 ﻿using Flex.Application.Abstractions.Authentication;
 using Flex.Application.Abstractions.Data;
-using Flex.Application.UserCases.V1.Account.Login.DTOs;
 using Flex.Contract.Abstractions.Message;
 using Flex.Contract.Abstractions.Shared;
 
-namespace Flex.Application.UserCases.V1.Account.Login.Commands
+namespace Flex.Application.UserCases.V1.Account.Login
 {
     public class LoginCommandHandler : ICommandHandler<LoginCommand, LoginResponse>
     {
@@ -14,7 +13,7 @@ namespace Flex.Application.UserCases.V1.Account.Login.Commands
             {
                 AccessToken = "Token"
             };
-            
+
             return Result.Success(response);
         }
     }

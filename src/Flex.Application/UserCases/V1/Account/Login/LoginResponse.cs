@@ -1,4 +1,4 @@
-﻿namespace Flex.Application.UserCases.V1.Account.Login.DTOs
+﻿namespace Flex.Application.UserCases.V1.Account.Login
 {
     public class LoginResponse
     {

@@ -7,16 +7,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="UserCases\V1\Account\Login\Queries\**" />
+    <EmbeddedResource Remove="UserCases\V1\Account\Login\Queries\**" />
+    <None Remove="UserCases\V1\Account\Login\Queries\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="MediatR" Version="12.3.0" />
     <PackageReference Include="Microsoft.Extensions.Logging" Version="8.0.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Flex.Contract\Flex.Contract.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="UserCases\V1\Account\Login\Queries\" />
   </ItemGroup>
 
 </Project>

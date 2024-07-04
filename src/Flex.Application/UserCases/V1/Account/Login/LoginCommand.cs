@@ -1,7 +1,6 @@
-﻿using Flex.Application.UserCases.V1.Account.Login.DTOs;
-using Flex.Contract.Abstractions.Message;
+﻿using Flex.Contract.Abstractions.Message;
 
-namespace Flex.Application.UserCases.V1.Account.Login.Commands
+namespace Flex.Application.UserCases.V1.Account.Login
 {
     public class LoginCommand : ICommand<LoginResponse>
     {

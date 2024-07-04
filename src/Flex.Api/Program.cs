@@ -26,6 +26,9 @@ try
     // MediaR
     builder.Services.AddMediaR();
 
+    // EntityFrameworkCore
+    builder.Services.AddEntityFrameworkCore(builder.Configuration);
+
     var app = builder.Build();
 
     Log.Information("Application starting up");
