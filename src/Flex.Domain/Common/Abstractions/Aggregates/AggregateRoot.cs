@@ -1,7 +1,7 @@
 ﻿using Flex.Contract.Abstractions.Message;
-using Flex.Domain.Abstractions.Entities;
+using Flex.Domain.Common.Abstractions.Entities;
 
-namespace Flex.Domain.Abstractions.Aggregates
+namespace Flex.Domain.Common.Abstractions.Aggregates
 {
     public abstract class AggregateRoot<T> : Entity<T>
     {

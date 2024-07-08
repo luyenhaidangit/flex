@@ -1,4 +1,4 @@
-﻿using Flex.Domain.Abstractions;
+﻿using Flex.Domain.Common.Abstractions.Data;
 using Microsoft.EntityFrameworkCore;
 
 namespace Flex.Persistence

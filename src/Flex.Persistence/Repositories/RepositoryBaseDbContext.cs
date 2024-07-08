@@ -1,5 +1,5 @@
-﻿using Flex.Domain.Abstractions.Entities;
-using Flex.Domain.Abstractions.Repositories;
+﻿using Flex.Domain.Common.Abstractions.Data;
+using Flex.Domain.Common.Abstractions.Entities;
 using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
 

@@ -16,4 +16,8 @@
     <ProjectReference Include="..\Flex.Contract\Flex.Contract.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Customer\Enums\" />
+  </ItemGroup>
+
 </Project>

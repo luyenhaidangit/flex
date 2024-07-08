@@ -1,7 +1,7 @@
-﻿using Flex.Domain.Abstractions.Entities;
-using Flex.Domain.Abstractions.Repositories;
-using System.Linq.Expressions;
+﻿using System.Linq.Expressions;
 using Microsoft.EntityFrameworkCore;
+using Flex.Domain.Common.Abstractions.Entities;
+using Flex.Domain.Common.Abstractions.Data;
 
 namespace Flex.Persistence.Repositories
 {

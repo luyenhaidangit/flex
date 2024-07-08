@@ -1,6 +1,4 @@
-﻿using Flex.Domain.Abstractions.Repositories;
-using Flex.Domain.Abstractions;
-using Flex.Domain.Entities.Identity;
+﻿using Flex.Domain.Entities.Identity;
 using Flex.Persistence.Interceptors;
 using Flex.Persistence.Repositories;
 using Microsoft.AspNetCore.Identity;
@@ -9,6 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using Flex.Persistence.DependencyInjection.Options;
+using Flex.Domain.Common.Abstractions.Data;
 
 namespace Flex.Persistence.DependencyInjection.Extensions
 {

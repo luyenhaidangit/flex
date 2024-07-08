@@ -1,9 +1,10 @@
-﻿using Flex.Domain.Abstractions.Entities;
-using Flex.Domain.Abstractions;
-using Flex.Persistence.Outbox;
+﻿using Flex.Persistence.Outbox;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
+using Flex.Domain.Common.Abstractions.Aggregates;
+using Flex.Domain.Common.Abstractions.Entities;
+using Flex.Domain.Common.Abstractions.Data;
 
 namespace Flex.Persistence
 {
@@ -27,7 +28,7 @@ namespace Flex.Persistence
         private void ConvertDomainEventsToOutboxMessages()
         {
             var outboxMessages = _dbContext.ChangeTracker
-                .Entries<Domain.Abstractions.Aggregates.AggregateRoot<Guid>>()
+                .Entries<AggregateRoot<Guid>>()
                 .Select(x => x.Entity)
                 .SelectMany(aggregateRoot =>
                 {

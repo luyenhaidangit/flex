@@ -1,4 +1,4 @@
-﻿namespace Flex.Domain.Abstractions.Primitives
+﻿namespace Flex.Domain.Common.Abstractions.Primitives
 {
     public abstract class ValueObject : IEquatable<ValueObject>
     {

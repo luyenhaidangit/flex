@@ -1,7 +1,7 @@
-﻿using Flex.Domain.Abstractions.Entities;
-using Microsoft.EntityFrameworkCore.ChangeTracking;
+﻿using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.EntityFrameworkCore.Diagnostics;
 using Microsoft.EntityFrameworkCore;
+using Flex.Domain.Common.Abstractions.Entities;
 
 namespace Flex.Persistence.Interceptors
 {

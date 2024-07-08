@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore.Diagnostics;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
+using Flex.Domain.Common.Abstractions.Aggregates;
 
 namespace Flex.Persistence.Interceptors
 {
@@ -21,7 +22,7 @@ namespace Flex.Persistence.Interceptors
             }
 
             var outboxMessages = dbContext.ChangeTracker
-                .Entries<Domain.Abstractions.Aggregates.AggregateRoot<Guid>>()
+                .Entries<AggregateRoot<Guid>>()
                 .Select(x => x.Entity)
                 .SelectMany(aggregateRoot =>
                 {

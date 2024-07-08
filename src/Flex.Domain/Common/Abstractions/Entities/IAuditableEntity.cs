@@ -1,4 +1,4 @@
-﻿namespace Flex.Domain.Abstractions.Entities
+﻿namespace Flex.Domain.Common.Abstractions.Entities
 {
     public interface IAuditableEntity
     {

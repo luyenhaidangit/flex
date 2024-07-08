@@ -1,10 +1,8 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System.Linq.Expressions;
+﻿using System.Linq.Expressions;
 
-namespace Flex.Domain.Abstractions.Repositories
+namespace Flex.Domain.Common.Abstractions.Data
 {
-    public interface IRepositoryBaseDbContext<TContext, TEntity, in TKey>
-    where TContext : DbContext
+    public interface IRepositoryBase<TEntity, in TKey>
     where TEntity : class // => In implementation should be Entity<TKey>
     {
         Task<TEntity> FindByIdAsync(TKey id, CancellationToken cancellationToken = default, params Expression<Func<TEntity, object>>[] includeProperties);
