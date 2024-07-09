@@ -1,6 +1,6 @@
 ﻿namespace Flex.Domain.Customer.Entities
 {
-    public class CfContact
+    public class Cfcontact
     {
         public int AutoId { get; set; }
 

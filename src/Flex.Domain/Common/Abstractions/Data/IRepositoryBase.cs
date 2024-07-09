@@ -2,8 +2,10 @@
 
 namespace Flex.Domain.Common.Abstractions.Data
 {
-    public interface IRepositoryBase<TEntity, in TKey>
-    where TEntity : class // => In implementation should be Entity<TKey>
+    /// <summary>
+    /// In implementation should be Entity<TKey>
+    /// </summary>
+    public interface IRepositoryBase<TEntity, in TKey> where TEntity : class
     {
         Task<TEntity> FindByIdAsync(TKey id, CancellationToken cancellationToken = default, params Expression<Func<TEntity, object>>[] includeProperties);
 

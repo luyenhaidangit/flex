@@ -1,6 +1,6 @@
 ﻿namespace Flex.Domain.Customer.Entities
 {
-    public class CfMast
+    public class Cfmast
     {
         public string CustId { get; set; }
 

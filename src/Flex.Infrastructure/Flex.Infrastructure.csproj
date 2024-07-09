@@ -17,6 +17,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Flex.Application\Flex.Application.csproj" />
     <ProjectReference Include="..\Flex.Contract\Flex.Contract.csproj" />
+    <ProjectReference Include="..\Flex.Domain\Flex.Domain.csproj" />
   </ItemGroup>
 
 </Project>
