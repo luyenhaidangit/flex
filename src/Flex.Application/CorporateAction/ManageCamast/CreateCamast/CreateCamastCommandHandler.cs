@@ -1,18 +1,16 @@
 ﻿using Flex.Contract.Abstractions.Message;
 using Flex.Contract.Abstractions.Shared;
 
-namespace Flex.Application.CorporateAction.ApproveCamast
+namespace Flex.Application.CorporateAction.ManageCamast.Commands.CreateCamast
 {
     /// <summary>
-    /// Duyệt bản ghi Camast.
-    /// Trạng thái N Duyệt
+    /// Thêm bản ghi Camast.
+    /// Trạng thái P Chờ duyệt
     /// </summary>
-    public class ApproveCamastCommandHandler : ICommandHandler<ApproveCamastCommand>
+    public class CreateCamastCommandHandler : ICommandHandler<ApproveCamastCommand>
     {
         public Task<Result> Handle(ApproveCamastCommand request, CancellationToken cancellationToken)
         {
-            // Tạo Camast
-
             throw new NotImplementedException();
         }
     }

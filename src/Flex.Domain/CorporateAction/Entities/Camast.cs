@@ -11,22 +11,60 @@ namespace Flex.Domain.CorporateAction.Entities
         #region Properties
         public string CamastId { get; set; }
 
+        // Loại thực hiện quyền
         public string Catype { get; set; }
 
+        // Ngày đăng ký cuối cùng
         public DateTime ReportDate { get; set; }
         #endregion
 
-        #region Bussiness
-        // Catype
+        #region Define
+
+        #region Catype
         private static readonly HashSet<CorporateActionType> PendingStockActions = new HashSet<CorporateActionType>
         {
-            CorporateActionType.PurchaseRight,
             CorporateActionType.StockDividend,
-            CorporateActionType.BonusShares,
-            CorporateActionType.StockToStockConversion
+            CorporateActionType.PurchaseRight,
+            CorporateActionType.StockToStockConversion,
+            CorporateActionType.BonusStock
         };
 
-        public bool IsPendingStockAction => PendingStockActions.Contains(this.Catype);
+        private static readonly HashSet<CorporateActionType> PendingDividendActions = new HashSet<CorporateActionType>
+        {
+            CorporateActionType.StockDividend,
+            CorporateActionType.BonusStock,
+            CorporateActionType.StockToStockConversion, 
+            CorporateActionType.CashDividend, 
+            CorporateActionType.BondInterestPayment
+        };
+
+        // Sự kiện quyền có chứng khoán chờ về
+        public bool IsPendingStockAction
+        {
+            get
+            {
+                if (Enum.TryParse(typeof(CorporateActionType), Catype, out var result))
+                {
+                    return PendingStockActions.Contains((CorporateActionType)result);
+                }
+                return false;
+            }
+        }
+
+        // Sự kiện quyền có tiền cổ tức chờ về
+        public bool IsPendingDividendAction
+        {
+            get
+            {
+                if (Enum.TryParse(typeof(CorporateActionType), Catype, out var result))
+                {
+                    return PendingDividendActions.Contains((CorporateActionType)result);
+                }
+                return false;
+            }
+        }
+        #endregion
+
         #endregion
     }
 }

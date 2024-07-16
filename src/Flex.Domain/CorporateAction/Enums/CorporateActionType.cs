@@ -35,7 +35,7 @@ namespace Flex.Domain.CorporateAction.Enums
         StockToStockConversion = 020,
 
         [Description("Cổ phiếu thưởng")]
-        BonusShares = 021,
+        BonusStock = 021,
 
         [Description("Quyền bỏ phiếu")]
         VotingRight = 022,
