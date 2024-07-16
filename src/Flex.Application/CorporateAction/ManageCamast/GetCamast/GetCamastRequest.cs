@@ -1,4 +1,4 @@
-﻿namespace Flex.Application.CorporateAction.ManageCamast.Query.GetCamast
+﻿namespace Flex.Application.CorporateAction.ManageCamast.GetCamast
 {
     public class GetCamastRequest
     {

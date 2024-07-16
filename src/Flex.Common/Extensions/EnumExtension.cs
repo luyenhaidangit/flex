@@ -12,5 +12,10 @@ namespace Flex.Common.Extensions
 
             return attribute == null ? value.ToString() : attribute.Description;
         }
+
+        public static int GetNumericValue(this Enum value)
+        {
+            return Convert.ToInt32(value);
+        }
     }
 }

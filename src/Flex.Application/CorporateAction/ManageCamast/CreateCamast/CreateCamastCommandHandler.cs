@@ -1,7 +1,7 @@
 ﻿using Flex.Contract.Abstractions.Message;
 using Flex.Contract.Abstractions.Shared;
 
-namespace Flex.Application.CorporateAction.ManageCamast.Commands.CreateCamast
+namespace Flex.Application.CorporateAction.ManageCamast.CreateCamast
 {
     /// <summary>
     /// Thêm bản ghi Camast.

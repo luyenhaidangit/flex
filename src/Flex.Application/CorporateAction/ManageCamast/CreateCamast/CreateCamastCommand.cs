@@ -1,6 +1,6 @@
 ﻿using Flex.Contract.Abstractions.Message;
 
-namespace Flex.Application.CorporateAction.ManageCamast.Commands.CreateCamast
+namespace Flex.Application.CorporateAction.ManageCamast.CreateCamast
 {
     public sealed record ApproveCamastCommand : ICommand
     {

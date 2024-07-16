@@ -1,4 +1,4 @@
-﻿namespace Flex.Application.CorporateAction.ManageCamast.Commands.CreateCamast
+﻿namespace Flex.Application.CorporateAction.ManageCamast.CreateCamast
 {
     public class CreateCamastRequest
     {

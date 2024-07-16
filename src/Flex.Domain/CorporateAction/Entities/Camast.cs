@@ -9,6 +9,7 @@ namespace Flex.Domain.CorporateAction.Entities
     public class Camast
     {
         #region Properties
+        // Mã thực hiện quyền
         public string CamastId { get; set; }
 
         // Loại thực hiện quyền
@@ -16,6 +17,9 @@ namespace Flex.Domain.CorporateAction.Entities
 
         // Ngày đăng ký cuối cùng
         public DateTime ReportDate { get; set; }
+
+        // Trạng thái xoá thực hiện quyền
+        public string Deltd { get; set; }
         #endregion
 
         #region Define
