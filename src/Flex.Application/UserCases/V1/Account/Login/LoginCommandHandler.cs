@@ -5,9 +5,9 @@ using Flex.Contract.Abstractions.Shared;
 
 namespace Flex.Application.UserCases.V1.Account.Login
 {
-    public class LoginCommandHandler : ICommandHandler<LoginCommand, LoginResponse>
+    public class LoginCommandHandler : ICommandHandler<CreateCamastCommand, LoginResponse>
     {
-        public async Task<Result<LoginResponse>> Handle(LoginCommand request, CancellationToken cancellationToken)
+        public async Task<Result<LoginResponse>> Handle(CreateCamastCommand request, CancellationToken cancellationToken)
         {
             var response = new LoginResponse()
             {

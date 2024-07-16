@@ -18,7 +18,7 @@ namespace Flex.Api.Controllers.V1
         }
 
         [HttpPost("login")]
-        public async Task<IActionResult> Login([FromBody] LoginCommand command)
+        public async Task<IActionResult> Login([FromBody] CreateCamastCommand command)
         {
             var token = await _mediator.Send(command);
             if (token == null)
