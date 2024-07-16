@@ -2,7 +2,7 @@
 
 namespace Flex.Application.UserCases.V1.Account.Login
 {
-    public class LoginCommand : ICommand<LoginResponse>
+    public class CreateCamastCommand : ICommand<LoginResponse>
     {
         public string UserName { get; set; }
 

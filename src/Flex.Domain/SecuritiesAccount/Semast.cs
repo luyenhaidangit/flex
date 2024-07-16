@@ -1,4 +1,4 @@
-﻿namespace Flex.Domain.Entities.SecuritiesAccount
+﻿namespace Flex.Domain.SecuritiesAccount
 {
     /// <summary>
     /// Thông tin tài khoản chứng khoán.

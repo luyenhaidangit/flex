@@ -13,6 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Flex.Common\Flex.Common.csproj" />
     <ProjectReference Include="..\Flex.Contract\Flex.Contract.csproj" />
   </ItemGroup>
 
