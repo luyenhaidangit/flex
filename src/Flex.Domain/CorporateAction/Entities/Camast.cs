@@ -12,7 +12,10 @@ namespace Flex.Domain.CorporateAction.Entities
         // Mã thực hiện quyền
         public string CamastId { get; set; }
 
-        // Loại thực hiện quyền
+        /// <summary>
+        /// Loại thực hiện quyền
+        /// Nhận các giá trị <see cref="CorporateActionType"/>.
+        /// </summary>
         public string Catype { get; set; }
 
         // Ngày đăng ký cuối cùng
