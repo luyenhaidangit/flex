@@ -29,6 +29,9 @@ try
     // EntityFrameworkCore
     builder.Services.AddEntityFrameworkCore(builder.Configuration);
 
+    // Quartz
+    builder.Services.AddQuartzApplication();
+
     var app = builder.Build();
 
     Log.Information("Application starting up");

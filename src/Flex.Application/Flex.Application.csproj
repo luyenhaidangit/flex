@@ -23,4 +23,8 @@
     <ProjectReference Include="..\Flex.Domain\Flex.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="CorporateAction\ExecuteTransaction\CreateListOwner\" />
+  </ItemGroup>
+
 </Project>

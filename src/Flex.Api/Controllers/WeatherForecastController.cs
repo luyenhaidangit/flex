@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Serilog;
 using Swashbuckle.AspNetCore.Annotations;
 
 namespace Flex.Api.Controllers
@@ -42,6 +43,8 @@ namespace Flex.Api.Controllers
         [SwaggerResponse(200, "Returns the weather forecast", typeof(IEnumerable<WeatherForecast>))]
         public IEnumerable<WeatherForecast> Get()
         {
+            Log.Information("Batch job executed at: " + DateTime.Now);
+
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
                 Date = DateOnly.FromDateTime(DateTime.Now.AddDays(index)),

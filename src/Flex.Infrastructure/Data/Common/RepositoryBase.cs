@@ -38,6 +38,11 @@ namespace Flex.Infrastructure.Data.Common
         {
             throw new NotImplementedException();
         }
+
+        public Task<(IEnumerable<T>, int)> SearchAndPaginateAsync(Dictionary<string, (string operation, object value)> searchs, int pageIndex, int pageSize, string sortBy, bool ascending)
+        {
+            throw new NotImplementedException();
+        }
     }
 
     public class RepositoryBase<TEntity, TKey> : IRepositoryBase<TEntity, TKey>, IDisposable where TEntity : Entity<TKey>
