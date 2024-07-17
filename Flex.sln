@@ -9,13 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Flex.Contract", "src\Flex.C
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Flex.Application", "src\Flex.Application\Flex.Application.csproj", "{C915E3E3-2A27-4C66-B81F-7CFE81F096D5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Flex.Persistence", "src\Flex.Persistence\Flex.Persistence.csproj", "{169847BF-49AC-4278-93AE-1C2401237DA8}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Flex.Infrastructure", "src\Flex.Infrastructure\Flex.Infrastructure.csproj", "{3F8102FB-7E0D-4650-A335-5906273CAC8B}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Flex.Api", "src\Flex.Api\Flex.Api.csproj", "{C9478902-44D0-42F7-96ED-C5EFF9F47839}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flex.Common", "src\Flex.Common\Flex.Common.csproj", "{977BB51B-6967-44F5-AA18-0CA7B94D9B6C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Flex.Common", "src\Flex.Common\Flex.Common.csproj", "{977BB51B-6967-44F5-AA18-0CA7B94D9B6C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +33,6 @@ Global
 		{C915E3E3-2A27-4C66-B81F-7CFE81F096D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C915E3E3-2A27-4C66-B81F-7CFE81F096D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C915E3E3-2A27-4C66-B81F-7CFE81F096D5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{169847BF-49AC-4278-93AE-1C2401237DA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{169847BF-49AC-4278-93AE-1C2401237DA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{169847BF-49AC-4278-93AE-1C2401237DA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{169847BF-49AC-4278-93AE-1C2401237DA8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3F8102FB-7E0D-4650-A335-5906273CAC8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3F8102FB-7E0D-4650-A335-5906273CAC8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3F8102FB-7E0D-4650-A335-5906273CAC8B}.Release|Any CPU.ActiveCfg = Release|Any CPU

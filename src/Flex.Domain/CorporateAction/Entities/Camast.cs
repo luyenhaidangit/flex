@@ -22,7 +22,7 @@ namespace Flex.Domain.CorporateAction.Entities
 
         /// <summary>
         /// Loại thực hiện quyền
-        /// Nhận các giá trị <see cref="CorporateActionType"/>.
+        /// Nhận các giá trị <see cref="Flex.Domain.CorporateAction.Enums.CorporateActionType"/>.
         /// </summary>
         public string Catype { get; set; }
 
