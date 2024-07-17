@@ -1,7 +1,4 @@
-﻿using Flex.Application.CorporateAction.GeneralSearch.GetStockDividendCompare;
-using Flex.Common.Constants;
-using Flex.Domain.CorporateAction.Entities;
-using Flex.Domain.CorporateAction.Enums;
+﻿using Flex.Domain.CorporateAction.Entities;
 using Flex.Domain.SecuritiesPortfolio.Entities;
 
 namespace Flex.Application.CorporateAction.ExecuteTransaction.CreateListOwner
