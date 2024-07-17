@@ -12,6 +12,15 @@ namespace Flex.Domain.CorporateAction.Entities
         // Mã thực hiện quyền
         public string CamastId { get; set; }
 
+        // Mã code chứng khoán
+        public string CodeId { get; set; }
+
+        /// <summary>
+        /// Mệnh giá chứng khoán.
+        /// Xác định giá trị, tính toán lãi suất, cổ tức...
+        /// </summary>
+        public string Parvalue { get; set; }
+
         /// <summary>
         /// Loại thực hiện quyền
         /// Nhận các giá trị <see cref="CorporateActionType"/>.

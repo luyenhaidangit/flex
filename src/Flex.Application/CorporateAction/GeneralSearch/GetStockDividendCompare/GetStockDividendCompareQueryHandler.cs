@@ -7,7 +7,7 @@ namespace Flex.Application.CorporateAction.GeneralSearch.GetStockDividendCompare
 {
     /// <summary>
     /// Lấy danh sách đối chiếu thông tin thực hiện quyền chia cổ tức bằng cổ phiếu.
-    /// Trạng thái P Chờ duyệt
+    /// Danh sách bản ghi thực hiện quyền của từng tài khoản Caschd loại chia cổ tức bằng cổ phiếu.
     /// </summary>
     public class GetStockDividendCompareQueryHandler
     {

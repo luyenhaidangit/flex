@@ -5,6 +5,9 @@
     /// </summary>
     public class Sbsecurities
     {
+        // Mã code chứng khoán
+        public string CodeId { get; set; }
+
         /// <summary>
         /// Mệnh giá chứng khoán.
         /// Xác định giá trị, tính toán lãi suất, cổ tức...
