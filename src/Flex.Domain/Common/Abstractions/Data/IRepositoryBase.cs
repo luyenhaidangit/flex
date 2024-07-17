@@ -2,6 +2,13 @@
 
 namespace Flex.Domain.Common.Abstractions.Data
 {
+    public interface IRepositoryBase<T> where T : class
+    {
+        Task<T> FindSingleAsync(Expression<Func<T, bool>>? predicate = null, CancellationToken cancellationToken = default, params Expression<Func<T, object>>[] includeProperties);
+
+        IQueryable<T> FindAll(Expression<Func<T, bool>>? predicate = null, params Expression<Func<T, object>>[] includeProperties);
+    }
+
     /// <summary>
     /// In implementation should be Entity<TKey>
     /// </summary>

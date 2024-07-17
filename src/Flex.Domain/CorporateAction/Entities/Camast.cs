@@ -1,5 +1,4 @@
 ﻿using Flex.Domain.CorporateAction.Enums;
-using System.Linq;
 
 namespace Flex.Domain.CorporateAction.Entities
 {

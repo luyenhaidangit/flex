@@ -6,7 +6,7 @@ using Flex.Domain.Common.Abstractions.Aggregates;
 using Flex.Domain.Common.Abstractions.Entities;
 using Flex.Domain.Common.Abstractions.Data;
 
-namespace Flex.Infrastructure.Data.Base
+namespace Flex.Infrastructure.Data.Common
 {
     public class UnitOfWork : IUnitOfWork
     {
