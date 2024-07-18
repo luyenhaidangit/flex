@@ -1,10 +1,4 @@
-﻿//using Flex.Persistence.Outbox;
-using Microsoft.EntityFrameworkCore.ChangeTracking;
-using Microsoft.EntityFrameworkCore;
-using Newtonsoft.Json;
-using Flex.Domain.Common.Abstractions.Aggregates;
-using Flex.Domain.Common.Abstractions.Entities;
-using Flex.Domain.Common.Abstractions.Data;
+﻿using Flex.Domain.Common.Data;
 
 namespace Flex.Infrastructure.Data.Common
 {
@@ -13,12 +7,12 @@ namespace Flex.Infrastructure.Data.Common
         private readonly ApplicationDbContext _dbContext;
 
         public UnitOfWork(ApplicationDbContext dbContext)
-            => _dbContext = dbContext;
+        {
+            _dbContext = dbContext;
+        }
 
         public async Task SaveChangesAsync(CancellationToken cancellationToken = default)
         {
-            //ConvertDomainEventsToOutboxMessages();
-            //UpdateAuditableEntities();
             await _dbContext.SaveChangesAsync();
         }
 

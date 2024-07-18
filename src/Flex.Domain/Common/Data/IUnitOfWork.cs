@@ -1,4 +1,4 @@
-﻿namespace Flex.Domain.Common.Abstractions.Data
+﻿namespace Flex.Domain.Common.Data
 {
     public interface IUnitOfWork : IAsyncDisposable
     {
