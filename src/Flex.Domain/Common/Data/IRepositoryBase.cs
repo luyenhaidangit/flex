@@ -3,6 +3,11 @@
     public interface IRepositoryBase<T> where T : class
     {
         /// <summary>
+        /// Lấy tất cả các bản ghi
+        /// </summary>
+        Task<IEnumerable<T>> GetAllAsync();
+
+        /// <summary>
         /// Tìm kiếm và phân trang
         /// Điều kiện tìm kiếm operation searchs nhận các giá trị <see cref="Flex.Common.Constants.OperationType"/>.
         /// </summary>

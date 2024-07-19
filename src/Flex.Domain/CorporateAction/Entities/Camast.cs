@@ -1,35 +1,45 @@
 ﻿using Flex.Domain.CorporateAction.Enums;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Flex.Domain.CorporateAction.Entities
 {
     /// <summary>
     /// Thông tin về các đợt thực hiện quyền.
     /// </summary>
+    [Table("CAMAST")]
     public class Camast
     {
         #region Properties
         // Mã thực hiện quyền
+        [Key]
+        [Column("CAMASTID")]
         public string CamastId { get; set; }
 
         // Mã code chứng khoán
+        [Column("CODEID")]
         public string CodeId { get; set; }
 
         /// <summary>
         /// Mệnh giá chứng khoán.
         /// Xác định giá trị, tính toán lãi suất, cổ tức...
         /// </summary>
+        [Column("PARVALUE")]
         public string Parvalue { get; set; }
 
         /// <summary>
         /// Loại thực hiện quyền
         /// Nhận các giá trị <see cref="Flex.Domain.CorporateAction.Enums.CorporateActionType"/>.
         /// </summary>
+        [Column("CATYPE")]
         public string Catype { get; set; }
 
         // Ngày đăng ký cuối cùng
-        public DateTime ReportDate { get; set; }
+        //public DateTime ReportDate { get; set; }
+        //public string ReportDate { get; set; }
 
         // Trạng thái xoá thực hiện quyền
+        [Column("DELTD")]
         public string Deltd { get; set; }
         #endregion
 

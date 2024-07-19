@@ -32,7 +32,7 @@ namespace Flex.Application.CorporateAction.GeneralSearch.GetStockDividendCompare
                 {
                     CamastId = camast.CamastId,
                     Catype = camast.Catype,
-                    ReportDate = camast.ReportDate
+                    //ReportDate = camast.ReportDate
                 }
             );
 

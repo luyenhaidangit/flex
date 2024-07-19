@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Flex.Domain.CorporateAction.Entities;
+using Microsoft.EntityFrameworkCore;
 
 namespace Flex.Infrastructure.Data
 {
@@ -12,5 +13,7 @@ namespace Flex.Infrastructure.Data
         {
             builder.ApplyConfigurationsFromAssembly(AssemblyReference.Assembly);
         }
+
+        public DbSet<Camast> Camasts { get; set; }
     }
 }

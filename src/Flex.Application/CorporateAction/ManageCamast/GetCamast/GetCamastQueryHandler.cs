@@ -1,11 +1,11 @@
 ﻿using Flex.Application.Common.Shared;
 using Flex.Application.Common.Message;
 using Flex.Domain.CorporateAction.Interfaces;
-using Flex.Contract.Abstractions.Shared;
+using Flex.Domain.CorporateAction.Entities;
 
 namespace Flex.Application.CorporateAction.ManageCamast.GetCamast
 {
-    public sealed class GetCamastQueryHandler : IQueryHandler<GetCamastQuery, string>
+    public sealed class GetCamastQueryHandler : IQueryHandler<GetCamastQuery, IEnumerable<Camast>>
     {
         private readonly ICamastRepository _camastRepository;
 
@@ -14,11 +14,18 @@ namespace Flex.Application.CorporateAction.ManageCamast.GetCamast
             _camastRepository = camastRepository;
         }
 
-        public Task<Result<string>> Handle(GetCamastQuery request, CancellationToken cancellationToken)
+        public async Task<Result<IEnumerable<Camast>>> Handle(GetCamastQuery request, CancellationToken cancellationToken)
         {
-            var result = Flex.Application.Common.Shared.Result.Success("Done");
+            var camasts = await _camastRepository.GetAllAsync();
 
-            return Task.FromResult(result);
+            var result = new Result<IEnumerable<Camast>>
+            {
+                Data = camasts,
+                Success = true,
+                Message = "ok"
+            };
+
+            return result;
         }
     }
 }

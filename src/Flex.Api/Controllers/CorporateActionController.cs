@@ -4,7 +4,7 @@ using Flex.Application.CorporateAction.ManageCamast.GetCamast;
 
 namespace Flex.Api.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/corporate-action")]
     [ApiController]
     public class CorporateActionController : ControllerBase
     {

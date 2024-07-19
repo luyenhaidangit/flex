@@ -12,6 +12,11 @@ namespace Flex.Infrastructure.Data.Common
             _dbContext = dbContext;
         }
 
+        public async Task<IEnumerable<T>> GetAllAsync()
+        {
+            return await _dbContext.Set<T>().ToListAsync();
+        }
+
         public async Task<(IEnumerable<T>, int)> SearchAndPaginateAsync(Dictionary<string, (string operation, object value)> searchs, int pageIndex, int pageSize, string sortBy, bool ascending)
         {
             IQueryable<T> query = _dbContext.Set<T>();
