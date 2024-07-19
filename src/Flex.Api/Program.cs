@@ -21,9 +21,6 @@ try
     // Lib
     builder.Services.AddMediaR();
 
-    // Versioning
-    builder.Services.AddApiVersioningCore();
-
     // Auth
     builder.Services.AddJwtAuthentication(builder.Configuration);
 
