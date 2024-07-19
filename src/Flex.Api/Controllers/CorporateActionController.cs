@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MediatR;
-using Flex.Application.UserCases.V1.Account.Login;
+using Flex.Application.CorporateAction.ManageCamast.GetCamast;
 
 namespace Flex.Api.Controllers
 {
@@ -16,9 +16,13 @@ namespace Flex.Api.Controllers
         }
 
         [HttpGet("get")]
-        public async Task<IActionResult> GetCamast()
+        public async Task<IActionResult> GetCamast([FromQuery] GetCamastRequest request, CancellationToken cancellationToken)
         {
-            return Ok("ok");
+            var query = new GetCamastQuery(request);
+
+            var result = await _mediator.Send(query, cancellationToken);
+
+            return Ok(result);
         }
     }
 }
