@@ -1,4 +1,6 @@
-﻿namespace Flex.Api.Bootstrap.Extensions
+﻿using Microsoft.Extensions.DependencyInjection;
+
+namespace Flex.Infrastructure.Setup.Extensions
 {
     public static class MediaRExtension
     {

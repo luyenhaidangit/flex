@@ -1,6 +1,7 @@
 using Serilog;
 using Flex.Api.Bootstrap.Options;
 using Flex.Api.Bootstrap.Extensions;
+using Flex.Infrastructure.Setup.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,17 +18,17 @@ try
     // Controller
     builder.Services.AddControllers();
 
+    // Lib
+    builder.Services.AddMediaR();
+
     // Versioning
     builder.Services.AddApiVersioningCore();
 
     // Auth
     builder.Services.AddJwtAuthentication(builder.Configuration);
 
-    // MediaR
-    builder.Services.AddMediaR();
-
     // EntityFrameworkCore
-    builder.Services.AddEntityFrameworkCore(builder.Configuration);
+    //builder.Services.AddEntityFrameworkCore(builder.Configuration);
 
     // Quartz
     builder.Services.AddQuartzApplication();

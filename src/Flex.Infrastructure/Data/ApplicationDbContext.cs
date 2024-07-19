@@ -1,5 +1,4 @@
-﻿using Flex.Domain.Customer.Entities;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 
 namespace Flex.Infrastructure.Data
 {
@@ -13,7 +12,5 @@ namespace Flex.Infrastructure.Data
         {
             builder.ApplyConfigurationsFromAssembly(AssemblyReference.Assembly);
         }
-
-        public virtual DbSet<Cfmast> Banners { get; set; } = null!;
     }
 }

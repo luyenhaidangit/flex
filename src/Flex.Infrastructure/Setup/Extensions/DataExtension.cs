@@ -1,0 +1,21 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Oracle.ManagedDataAccess.Client;
+using Flex.Infrastructure.Data;
+
+namespace Flex.Infrastructure.Setup.Extensions
+{
+    public static class DataExtension
+    {
+        public static IServiceCollection AddEntityFrameworkCore(this IServiceCollection services, IConfiguration configuration)
+        {
+            OracleConfiguration.SqlNetAllowedLogonVersionClient = OracleAllowedLogonVersionClient.Version11;
+
+            services.AddDbContext<ApplicationDbContext>(options =>
+            options.UseOracle(configuration.GetConnectionString("OracleConnection")));
+
+            return services;
+        }
+    }
+}

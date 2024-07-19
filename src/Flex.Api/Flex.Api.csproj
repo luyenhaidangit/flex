@@ -14,7 +14,7 @@
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.6" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.7" />
     <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="7.6.2" />
-    <PackageReference Include="Oracle.EntityFrameworkCore" Version="8.23.40" />
+    <PackageReference Include="Oracle.EntityFrameworkCore" Version="8.23.50" />
     <PackageReference Include="Quartz.AspNetCore" Version="3.11.0" />
     <PackageReference Include="Serilog.AspNetCore" Version="8.0.1" />
     <PackageReference Include="Serilog.Sinks.Async" Version="2.0.0" />
@@ -25,6 +25,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Flex.Application\Flex.Application.csproj" />
+    <ProjectReference Include="..\Flex.Infrastructure\Flex.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
