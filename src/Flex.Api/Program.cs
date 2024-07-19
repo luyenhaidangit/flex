@@ -19,14 +19,15 @@ try
     // Controller
     builder.Services.AddControllers();
 
+    // Data
+    builder.Services.AddEntityFrameworkCore(builder.Configuration);
+    builder.Services.RegisterRepositories();
+
     // Lib
     builder.Services.AddMediaR();
 
     // Auth
     builder.Services.AddJwtAuthentication(builder.Configuration);
-
-    // EntityFrameworkCore
-    //builder.Services.AddEntityFrameworkCore(builder.Configuration);
 
     // Quartz
     builder.Services.AddQuartzApplication();

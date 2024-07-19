@@ -1,6 +1,8 @@
-﻿namespace Flex.Application.CorporateAction.ManageCamast.GetCamast
+﻿using Flex.Application.Common.Shared;
+
+namespace Flex.Application.CorporateAction.ManageCamast.GetCamast
 {
-    public class GetCamastRequest
+    public class GetCamastRequest : PagingRequest
     {
     }
 }

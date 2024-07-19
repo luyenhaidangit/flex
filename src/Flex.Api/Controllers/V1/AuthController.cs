@@ -17,16 +17,16 @@ namespace Flex.Api.Controllers.V1
             _mediator = mediator;
         }
 
-        [HttpPost("login")]
-        public async Task<IActionResult> Login([FromBody] CreateCamastCommand command)
-        {
-            var token = await _mediator.Send(command);
-            if (token == null)
-            {
-                return Unauthorized();
-            }
+        //[HttpPost("login")]
+        //public async Task<IActionResult> Login([FromBody] CreateCamastCommand command)
+        //{
+        //    var token = await _mediator.Send(command);
+        //    if (token == null)
+        //    {
+        //        return Unauthorized();
+        //    }
 
-            return Ok(new { Token = token });
-        }
+        //    return Ok(new { Token = token });
+        //}
     }
 }

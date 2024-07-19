@@ -2,10 +2,10 @@
 
 namespace Flex.Application.CorporateAction.ManageCamast.CreateCamast
 {
-    public sealed record ApproveCamastCommand : ICommand
-    {
-        public string CamastId { get; set; }
+    //public sealed record ApproveCamastCommand : ICommand
+    //{
+    //    public string CamastId { get; set; }
 
-        public DateTime ReportDate { get; set; }
-    }
+    //    public DateTime ReportDate { get; set; }
+    //}
 }

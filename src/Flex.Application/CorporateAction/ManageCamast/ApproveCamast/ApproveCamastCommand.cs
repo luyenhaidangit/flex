@@ -2,7 +2,7 @@
 
 namespace Flex.Application.CorporateAction.ManageCamast.ApproveCamast
 {
-    public sealed record ApproveCamastCommand : ICommand
-    {
-    }
+    //public sealed record ApproveCamastCommand : ICommand
+    //{
+    //}
 }
