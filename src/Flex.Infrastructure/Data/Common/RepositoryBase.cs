@@ -2,7 +2,7 @@
 
 namespace Flex.Infrastructure.Data.Common
 {
-    public class RepositoryBase<T> : IRepositoryBase<T> where T : class
+    public class RepositoryBase<T>
     {
         protected readonly ApplicationDbContext _context;
 

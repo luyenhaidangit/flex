@@ -3,7 +3,7 @@
     public interface IUnitOfWork : IAsyncDisposable
     {
         /// <summary>
-        /// Call save change from db context
+        /// Saves all changes made in all repositories within the unit of work.
         /// </summary>
         Task SaveChangesAsync(CancellationToken cancellationToken = default);
     }

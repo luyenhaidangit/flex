@@ -11,6 +11,11 @@ namespace Flex.Infrastructure.Data.Common
             _dbContext = dbContext;
         }
 
+        public IRepositoryBase<T> GetRepository<T>() where T : class
+        {
+            throw new NotImplementedException();
+        }
+
         public async Task SaveChangesAsync(CancellationToken cancellationToken = default)
         {
             await _dbContext.SaveChangesAsync();
