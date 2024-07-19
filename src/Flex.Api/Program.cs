@@ -1,6 +1,7 @@
 using Serilog;
 using Flex.Api.Bootstrap.Options;
 using Flex.Api.Bootstrap.Extensions;
+using Flex.Api.Setup.Extensions;
 using Flex.Infrastructure.Setup.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);

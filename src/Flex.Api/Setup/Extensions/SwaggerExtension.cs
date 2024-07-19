@@ -1,7 +1,7 @@
 ﻿using MicroElements.Swashbuckle.FluentValidation.AspNetCore;
 using Microsoft.OpenApi.Models;
 
-namespace Flex.Api.Bootstrap.Extensions
+namespace Flex.Api.Setup.Extensions
 {
     public static class SwaggerExtension
     {
@@ -12,8 +12,8 @@ namespace Flex.Api.Bootstrap.Extensions
                 c.SwaggerDoc("v1", new OpenApiInfo
                 {
                     Version = "v1",
-                    Title = "Flex Core Stock System API",
-                    Description = "API for the Flex core stock system",
+                    Title = "Flex",
+                    Description = "Flex Api",
                     //TermsOfService = new Uri("https://luyenhaidangit.id.vn"),
                     //Contact = new OpenApiContact
                     //{
