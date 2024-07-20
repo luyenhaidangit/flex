@@ -43,7 +43,7 @@ namespace Flex.Domain.CorporateAction.Entities
         public string Deltd { get; set; }
         #endregion
 
-        #region Define
+        #region Bussiness
 
         #region Catype
         private static readonly HashSet<CorporateActionType> PendingStockActions = new HashSet<CorporateActionType>
@@ -58,35 +58,29 @@ namespace Flex.Domain.CorporateAction.Entities
         {
             CorporateActionType.StockDividend,
             CorporateActionType.BonusStock,
-            CorporateActionType.StockToStockConversion, 
-            CorporateActionType.CashDividend, 
+            CorporateActionType.StockToStockConversion,
+            CorporateActionType.CashDividend,
             CorporateActionType.BondInterestPayment
         };
 
         // Sự kiện quyền có chứng khoán chờ về
-        public bool IsPendingStockAction
+        public bool IsPendingStockAction()
         {
-            get
+            if (Enum.TryParse(typeof(CorporateActionType), Catype, out var result))
             {
-                if (Enum.TryParse(typeof(CorporateActionType), Catype, out var result))
-                {
-                    return PendingStockActions.Contains((CorporateActionType)result);
-                }
-                return false;
+                return PendingStockActions.Contains((CorporateActionType)result);
             }
+            return false;
         }
 
         // Sự kiện quyền có tiền cổ tức chờ về
-        public bool IsPendingDividendAction
+        public bool IsPendingDividendAction()
         {
-            get
+            if (Enum.TryParse(typeof(CorporateActionType), Catype, out var result))
             {
-                if (Enum.TryParse(typeof(CorporateActionType), Catype, out var result))
-                {
-                    return PendingDividendActions.Contains((CorporateActionType)result);
-                }
-                return false;
+                return PendingDividendActions.Contains((CorporateActionType)result);
             }
+            return false;
         }
         #endregion
 
