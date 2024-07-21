@@ -5,6 +5,7 @@ using Oracle.ManagedDataAccess.Client;
 using Flex.Infrastructure.Data;
 using Flex.Domain.CorporateAction.Interfaces;
 using Flex.Infrastructure.Data.Repositories;
+using Flex.Application.Common.Data;
 
 namespace Flex.Infrastructure.Setup.Extensions
 {
@@ -16,6 +17,13 @@ namespace Flex.Infrastructure.Setup.Extensions
 
             services.AddDbContext<ApplicationDbContext>(options =>
             options.UseOracle(configuration.GetConnectionString("OracleConnection")));
+
+            return services;
+        }
+
+        public static IServiceCollection AddDapper(this IServiceCollection services, IConfiguration configuration)
+        {
+            services.AddSingleton<ISqlConnectionFactory>(_ => new SqlConnectionFactory(configuration.GetConnectionString("OracleConnection")));
 
             return services;
         }

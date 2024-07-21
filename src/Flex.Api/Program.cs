@@ -21,6 +21,7 @@ try
 
     // Data
     builder.Services.AddEntityFrameworkCore(builder.Configuration);
+    builder.Services.AddDapper(builder.Configuration);
     builder.Services.RegisterRepositories();
 
     // Lib
