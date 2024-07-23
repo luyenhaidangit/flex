@@ -1,0 +1,65 @@
+﻿using Dapper;
+using Flex.Application.Common.Data;
+using Flex.Application.Common.Message;
+using Flex.Application.Common.Shared;
+
+namespace Flex.Application.Customer.Securities.GetSecurities
+{
+    public class GetSecuritiesQueryHandler : IQueryHandler<GetSecuritiesQuery, PagingResult<GetSecuritiesRequest>>
+    {
+        private readonly ISqlConnectionFactory _sqlConnectionFactory;
+
+        public GetSecuritiesQueryHandler(ISqlConnectionFactory sqlConnectionFactory)
+        {
+            _sqlConnectionFactory = sqlConnectionFactory;
+        }
+
+        public async Task<Result<PagingResult<GetSecuritiesRequest>>> Handle(GetSecuritiesQuery request, CancellationToken cancellationToken)
+        {
+            using var connection = _sqlConnectionFactory.CreateConnection();
+
+            const string sql = """
+            SELECT CF.CUSTODYCD CUSTODYCD, -- Số tài khoản lưu ký,
+                   AF.ACCTNO AFACCTNO, -- Số tiểu khoản
+                   SE.ACCTNO ACCTNO, -- Số tiểu khoản chứng khoán
+                   CF.IDCODE IDCODE, -- Chứng minh nhân dân
+                   CF.FULLNAME FULLNAME,
+                   AF.ACTYPE ACTYPE, -- Mã loại hình
+                   SB.SYMBOL CODEID, -- Mã chứng khoán
+                   SE.OPNDATE OPNDATE, -- Ngày mở tài khoản
+                   SE.CLSDATE CLSDATE, -- Ngày đóng tài khoản
+                   SE.LASTDATE LASTDATE, -- Ngày giao dịch cuối cùng
+                   SE.STATUS STATUS, -- Trạng thái
+                   SE.PSTATUS PSTATUS, -- Trạng thái trước đó
+                   SE.IRTIED IRTIED, -- Loại hình biểu phí
+                   SE.ICCFTIED ICCFTIED, -- Loại hình biểu phí??
+                   SE.IRCD IRCD, -- Mã biểu phí
+                   SE.COSTPRICE COSTPRICE, -- Giá vay
+                   SE.TRADE TRADE, -- Số dư giao dịch
+                   SE.MORTAGE MORTAGE, -- Số dư phong toả theo deal
+                   SE.MARGIN MARGIN, -- Số dư giao dịch margin
+                   SE.NETTING NETTING, -- Số dư chờ giao dịch
+                   SE.STANDING STANDING, -- Số dư chưa thanh toán
+                   SE.WITHDRAW WITHDRAW, -- Số dư chờ rút
+                   SE.DEPOSIT DEPOSIT, -- Số dư chờ xác nhận lưu ký
+                   SE.TRANSFER TRANSFER, -- Số dư chờ chuyển
+                   SE.LOAN LOAN, -- Số dư đi vay
+                   AF.CUSTID CUSTID, -- Mã khách hàng
+                   SE.COSTDT COSTDT, -- Ngày tính giá vốn
+                   SE.BLOCKED BLOCKED, -- Số dư phong toả
+                   SE.RECEIVING RECEIVING -- Số dư chờ nhận về
+            FROM SEMAST SE
+            JOIN SBSECURITIES SB ON SE.CODEID = SB.CODEID
+            JOIN AFMAST AF ON SE.AFACCTNO = AF.ACCTNO
+            JOIN CFMAST CF ON AF.CUSTID = CF.CUSTID
+            WHERE AF.STATUS <> 'C' -- Đóng
+            AND SB.SECTYPE <> '004' -- Quyền chọn
+            AND SE.TRADE + SE.MORTAGE + SE.MARGIN + SE.NETTING + SE.STANDING + SE.WITHDRAW + SE.DEPOSIT + SE.TRANSFER + SE.LOAN + SE.BLOCKED + SE.RECEIVING > 0
+            """;
+
+            var queryResult = await connection.QueryAsync(sql);
+
+            throw new NotImplementedException();
+        }
+    }
+}
