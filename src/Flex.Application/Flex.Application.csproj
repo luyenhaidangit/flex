@@ -27,6 +27,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Common\Data\Extensions\" />
     <Folder Include="CorporateAction\ExecuteTransaction\CreateListOwner\" />
   </ItemGroup>
 

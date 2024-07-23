@@ -1,20 +1,21 @@
 ﻿using Dapper;
 using Flex.Application.Common.Data;
 using Flex.Application.Common.Message;
+using Flex.Application.Common.Mappers;
 using Flex.Application.Common.Shared;
 
-namespace Flex.Application.Customer.Securities.GetSecurities
+namespace Flex.Application.Customer.ManageSemast.GetSemast
 {
-    public class GetSecuritiesQueryHandler : IQueryHandler<GetSecuritiesQuery, PagingResult<GetSecuritiesRequest>>
+    public class GetSemastQueryHandler : IQueryHandler<GetSemastQuery, PagingResult<GetSemastResponse>>
     {
         private readonly ISqlConnectionFactory _sqlConnectionFactory;
 
-        public GetSecuritiesQueryHandler(ISqlConnectionFactory sqlConnectionFactory)
+        public GetSemastQueryHandler(ISqlConnectionFactory sqlConnectionFactory)
         {
             _sqlConnectionFactory = sqlConnectionFactory;
         }
 
-        public async Task<Result<PagingResult<GetSecuritiesRequest>>> Handle(GetSecuritiesQuery request, CancellationToken cancellationToken)
+        public async Task<Result<PagingResult<GetSemastResponse>>> Handle(GetSemastQuery request, CancellationToken cancellationToken)
         {
             using var connection = _sqlConnectionFactory.CreateConnection();
 
@@ -59,7 +60,18 @@ namespace Flex.Application.Customer.Securities.GetSecurities
 
             var queryResult = await connection.QueryAsync(sql);
 
-            throw new NotImplementedException();
+            var camasts = CustomerMapper.MapToIEnumerableSemastResponse(queryResult);
+
+            var result = PagingResult<GetSemastResponse>.Create(camasts, 1, 10, 800);
+
+            var result1 = new Result<PagingResult<GetSemastResponse>>
+            {
+                Data = result,
+                Success = true,
+                Message = "ok"
+            };
+
+            return result1;
         }
     }
 }

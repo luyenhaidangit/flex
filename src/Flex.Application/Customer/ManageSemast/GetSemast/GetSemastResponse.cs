@@ -1,6 +1,6 @@
-﻿namespace Flex.Application.Customer.Securities.GetSecurities
+﻿namespace Flex.Application.Customer.ManageSemast.GetSemast
 {
-    public class GetSecuritiesResponse
+    public class GetSemastResponse
     {
         public string CustodyCd { get; set; }
         public string AfAcctNo { get; set; }
