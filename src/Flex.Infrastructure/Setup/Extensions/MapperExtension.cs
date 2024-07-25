@@ -2,13 +2,13 @@
 
 namespace Flex.Infrastructure.Setup.Extensions
 {
-    public static class MapperExtension
-    {
-        public static IServiceCollection AddAutoMapperApplication(this IServiceCollection services)
-        {
-            services.AddAutoMapper(Flex.Application.AssemblyReference.Assembly);
+    //public static class MapperExtension
+    //{
+    //    public static IServiceCollection AddAutoMapperApplication(this IServiceCollection services)
+    //    {
+    //        services.AddAutoMapper(Flex.Application.AssemblyReference.Assembly);
 
-            return services;
-        }
-    }
+    //        return services;
+    //    }
+    //}
 }

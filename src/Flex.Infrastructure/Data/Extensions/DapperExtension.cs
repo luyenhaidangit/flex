@@ -22,7 +22,7 @@ namespace Flex.Infrastructure.Data.Extensions
 
             if (!match.Success)
             {
-                throw new ArgumentException("Invalid query sql!");
+                throw new ArgumentException("Invalid query sql!                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 `");
             }
 
             // Xây dựng câu lệnh COUNT

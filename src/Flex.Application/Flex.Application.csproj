@@ -24,6 +24,7 @@
     <ProjectReference Include="..\Flex.Common\Flex.Common.csproj" />
     <ProjectReference Include="..\Flex.Contract\Flex.Contract.csproj" />
     <ProjectReference Include="..\Flex.Domain\Flex.Domain.csproj" />
+    <ProjectReference Include="..\Flex.Infrastructure\Flex.Infrastructure.csproj" />
   </ItemGroup>
 
   <ItemGroup>

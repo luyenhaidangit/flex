@@ -1,6 +1,6 @@
 ﻿using Oracle.ManagedDataAccess.Client;
 using System.Data;
-using Flex.Application.Common.Data;
+using Flex.Domain.Common.Data;
 
 namespace Flex.Infrastructure.Data
 {

@@ -5,7 +5,7 @@ using Oracle.ManagedDataAccess.Client;
 using Flex.Infrastructure.Data;
 using Flex.Domain.CorporateAction.Interfaces;
 using Flex.Infrastructure.Data.Repositories;
-using Flex.Application.Common.Data;
+using Flex.Domain.Common.Data;
 
 namespace Flex.Infrastructure.Setup.Extensions
 {
