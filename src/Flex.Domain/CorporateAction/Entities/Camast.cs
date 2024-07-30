@@ -1,89 +1,183 @@
-﻿using Flex.Domain.CorporateAction.Enums;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Flex.Domain.CorporateAction.Entities
 {
     /// <summary>
     /// Thông tin về các đợt thực hiện quyền.
+    /// Thuộc tính:
+    /// + CamastId: Khoá chính, Mã thực hiện quyền
+    /// + CodeId: Mã chứng khoán
+    /// + Catype: Loại thực hiện quyền, nhận các giá trị <see cref="Flex.Domain.CorporateAction.Constants.CatypeConstant"/>.
+    /// + ReportDate: Ngày đăng ký cuối cùng
+    /// + ActionDate: Ngày thực hiện dự kiến
+    /// + DueDate: Ngày nộp tiền mua, ngày đăng ký quyền mua cuối cùng, ngày cuối cùng đăng ký nhận cổ phiếu,...tuỳ theo loại quyền
+    /// + ExPrice: Giá quy đổi cổ phiếu lẻ
+    /// + AutoId: Mã tự sinh
     /// </summary>
     [Table("CAMAST")]
     public class Camast
     {
         #region Properties
-        // Mã thực hiện quyền
-        [Key]
-        [Column("CAMASTID")]
         public string CamastId { get; set; }
 
-        // Mã code chứng khoán
-        [Column("CODEID")]
         public string CodeId { get; set; }
 
-        /// <summary>
-        /// Mệnh giá chứng khoán.
-        /// Xác định giá trị, tính toán lãi suất, cổ tức...
-        /// </summary>
-        [Column("PARVALUE")]
-        public string Parvalue { get; set; }
+        public string ToCodeId { get; set; }
 
-        /// <summary>
-        /// Loại thực hiện quyền
-        /// Nhận các giá trị <see cref="Flex.Domain.CorporateAction.Enums.CorporateActionType"/>.
-        /// </summary>
-        [Column("CATYPE")]
         public string Catype { get; set; }
 
-        // Ngày đăng ký cuối cùng
-        //public DateTime ReportDate { get; set; }
-        //public string ReportDate { get; set; }
+        public DateOnly ReportDate { get; set; }
 
-        // Trạng thái xoá thực hiện quyền
-        [Column("DELTD")]
+        public DateOnly DueDate { get; set; }
+
+        public DateOnly ActionDate { get; set; }
+
+        public double ExPrice { get; set; }
+
+        public decimal? Price { get; set; }
+
+        public string ExRate { get; set; }
+
+        public string RightOffRate { get; set; }
+
+        public string DevidentRate { get; set; }
+
+        public string DevidentShares { get; set; }
+
+        public string SplitRate { get; set; }
+
+        public string InterestRate { get; set; }
+
+        public decimal InterestPeriod { get; set; }
+
+        public string Status { get; set; }
+
+        public string Description { get; set; }
+
+        public string ExCodeId { get; set; }
+
+        public string PStatus { get; set; }
+
+        public decimal Rate { get; set; }
+
         public string Deltd { get; set; }
-        #endregion
 
-        #region Bussiness
+        public string TrfLimit { get; set; }
 
-        #region Catype
-        private static readonly HashSet<CorporateActionType> PendingStockActions = new HashSet<CorporateActionType>
-        {
-            CorporateActionType.StockDividend,
-            CorporateActionType.PurchaseRight,
-            CorporateActionType.StockToStockConversion,
-            CorporateActionType.BonusStock
-        };
+        public decimal ParValue { get; set; }
 
-        private static readonly HashSet<CorporateActionType> PendingDividendActions = new HashSet<CorporateActionType>
-        {
-            CorporateActionType.StockDividend,
-            CorporateActionType.BonusStock,
-            CorporateActionType.StockToStockConversion,
-            CorporateActionType.CashDividend,
-            CorporateActionType.BondInterestPayment
-        };
+        public string RoundType { get; set; }
 
-        // Sự kiện quyền có chứng khoán chờ về
-        public bool IsPendingStockAction()
-        {
-            if (Enum.TryParse(typeof(CorporateActionType), Catype, out var result))
-            {
-                return PendingStockActions.Contains((CorporateActionType)result);
-            }
-            return false;
-        }
+        public string OptSymbol { get; set; }
 
-        // Sự kiện quyền có tiền cổ tức chờ về
-        public bool IsPendingDividendAction()
-        {
-            if (Enum.TryParse(typeof(CorporateActionType), Catype, out var result))
-            {
-                return PendingDividendActions.Contains((CorporateActionType)result);
-            }
-            return false;
-        }
-        #endregion
+        public string OptCodeId { get; set; }
 
+        public DateTime? TradeDate { get; set; }
+
+        public DateTime? LastDate { get; set; }
+
+        public string RetailShare { get; set; }
+
+        public DateTime? RetailDate { get; set; }
+
+        public DateTime? FrDateRetail { get; set; }
+
+        public DateTime? ToDateRetail { get; set; }
+
+        public string FrTradePlace { get; set; }
+
+        public string ToTradePlace { get; set; }
+
+        public string TransferTimes { get; set; }
+
+        public DateTime? FrDateTransfer { get; set; }
+
+        public DateTime? ToDateTransfer { get; set; }
+
+        public string TaskCd { get; set; }
+
+        public DateTime? LastChange { get; set; }
+
+        public decimal PitRate { get; set; }
+
+        public string PitRateMethod { get; set; }
+
+        public string IsWft { get; set; }
+
+        public decimal PriceAccounting { get; set; }
+
+        public decimal? CaQty { get; set; }
+
+        public DateTime? BeginDate { get; set; }
+
+        public string PurposeDesc { get; set; }
+
+        public decimal? DevidentValue { get; set; }
+
+        public string AdvDesc { get; set; }
+
+        public string TypeRate { get; set; }
+
+        public decimal CirRoundType { get; set; }
+
+        public decimal PitRateSe { get; set; }
+
+        public DateTime? InActionDate { get; set; }
+
+        public string MakerId { get; set; }
+
+        public string ApprvId { get; set; }
+
+        public decimal ExeRate { get; set; }
+
+        public DateTime? CancelDate { get; set; }
+
+        public DateTime? ReceiveDate { get; set; }
+
+        public string CancelStatus { get; set; }
+
+        public string IsinCode { get; set; }
+
+        public decimal CashRound { get; set; }
+
+        public string IsAlloc { get; set; }
+
+        public string IsChangeWft { get; set; }
+
+        public DateTime? FDateOtc { get; set; }
+
+        public DateTime? TDateOtc { get; set; }
+
+        public decimal DayOfYear { get; set; }
+
+        public string RefCorpId { get; set; }
+
+        public DateTime? NRateNextDate { get; set; }
+
+        public DateTime? NDueDate { get; set; }
+
+        public DateTime? NoDate { get; set; }
+
+        public DateTime? ExFromDate { get; set; }
+
+        public DateTime? ExToDate { get; set; }
+
+        public DateTime? ExCancelDate { get; set; }
+
+        public DateTime? ExRecvDate { get; set; }
+
+        public string DomesticCd { get; set; }
+
+        public string VsdStatus { get; set; }
+
+        public string ExAddress { get; set; }
+
+        public string VsdId { get; set; }
+
+        public string ParName { get; set; }
+
+        public decimal AutoId { get; set; }
         #endregion
     }
 }
