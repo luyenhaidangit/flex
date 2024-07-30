@@ -8,11 +8,6 @@
     /// + CodeId: Mã chứng khoán
     /// + ToCodeId: Mã chứng khoán nhận, chuyển đổi, cổ tức,...
     /// + Status: Trạng thái thực hiện quyền, nhận các giá trị <see cref="Flex.Domain.CorporateAction.Constants.CaStatusConstant"/>
-    /// + ReportDate: Ngày đăng ký cuối cùng
-    /// + ActionDate: Ngày thực hiện dự kiến
-    /// + DueDate: Ngày nộp tiền mua, ngày đăng ký quyền mua cuối cùng, ngày cuối cùng đăng ký nhận cổ phiếu,...tuỳ theo loại quyền
-    /// + ExPrice: Giá quy đổi cổ phiếu lẻ
-    /// + AutoId: Mã tự sinh
     /// </summary>
     public class Camast
     {
