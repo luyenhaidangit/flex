@@ -40,7 +40,7 @@ namespace Flex.Application.CorporateAction.ExecuteTransaction.CreateListOwner
                 throw new Exception();
             }
 
-            camastToUpdate.Parvalue = security.Parvalue;
+            //camastToUpdate.Parvalue = security.Parvalue;
 
             throw new NotImplementedException();
         }

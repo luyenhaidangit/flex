@@ -1,6 +1,6 @@
 ﻿namespace Flex.Domain.CorporateAction.Constants
 {
-    public class CatypeConstant
+    public class CaTypeConstant
     {
         public const string AttendingShareholderMeeting = "005";
         public const string CollectingShareholderOpinions = "006";

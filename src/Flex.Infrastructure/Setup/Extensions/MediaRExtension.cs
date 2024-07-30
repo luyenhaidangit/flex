@@ -6,10 +6,10 @@ namespace Flex.Infrastructure.Setup.Extensions
     {
         public static IServiceCollection AddMediaR(this IServiceCollection services)
         {
-            services.AddMediatR(cfg =>
-            {
-                cfg.RegisterServicesFromAssembly(Flex.Application.AssemblyReference.Assembly);
-            });
+            //services.AddMediatR(cfg =>
+            //{
+            //    cfg.RegisterServicesFromAssembly(Flex.Application.AssemblyReference.Assembly);
+            //});
             //.RegisterServicesFromAssembly(Flex.Application.AssemblyReference.Assembly));
             //.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationDefaultBehavior<,>))
             //.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationPipelineBehavior<,>))

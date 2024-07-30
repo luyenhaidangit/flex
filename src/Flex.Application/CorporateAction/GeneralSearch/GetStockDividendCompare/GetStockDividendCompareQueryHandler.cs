@@ -17,24 +17,24 @@ namespace Flex.Application.CorporateAction.GeneralSearch.GetStockDividendCompare
 
             var queryCaschd = new List<Caschd>();
 
-            queryCamast = queryCamast.Where(
-                x => x.Catype == CorporateActionType.StockDividend.GetNumericValue().ToString("D3")
-                && x.Deltd == IsDeleted.NotDeleted
-            ).ToList();
+            //queryCamast = queryCamast.Where(
+            //    x => x.Catype == CorporateActionType.StockDividend.GetNumericValue().ToString("D3")
+            //    && x.Deltd == IsDeleted.NotDeleted
+            //).ToList();
 
-            queryCaschd = queryCaschd.Where(x => x.Deltd == IsDeleted.NotDeleted).ToList();
+            //queryCaschd = queryCaschd.Where(x => x.Deltd == IsDeleted.NotDeleted).ToList();
 
-            var result = queryCamast.Join(
-                queryCaschd,
-                camast => camast.CamastId,
-                caschd => caschd.CamastId,
-                (camast, caschd) => new
-                {
-                    CamastId = camast.CamastId,
-                    Catype = camast.Catype,
-                    //ReportDate = camast.ReportDate
-                }
-            );
+            //var result = queryCamast.Join(
+            //    queryCaschd,
+            //    camast => camast.CamastId,
+            //    caschd => caschd.CamastId,
+            //    (camast, caschd) => new
+            //    {
+            //        CamastId = camast.CamastId,
+            //        Catype = camast.Catype,
+            //        //ReportDate = camast.ReportDate
+            //    }
+            //);
 
 
             throw new NotImplementedException();
