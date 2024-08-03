@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Flex.Domain.Common.Data;
+using System.Linq.Expressions;
 
 namespace Flex.Infrastructure.Data.Common
 {
@@ -10,6 +11,11 @@ namespace Flex.Infrastructure.Data.Common
         public RepositoryBase(ApplicationDbContext dbContext)
         {
             _dbContext = dbContext;
+        }
+
+        public async Task<T> FindOneAsync(Expression<Func<T, bool>> predicate)
+        {
+            return await _dbContext.Set<T>().FirstOrDefaultAsync(predicate);
         }
 
         public async Task<IEnumerable<T>> GetAllAsync()

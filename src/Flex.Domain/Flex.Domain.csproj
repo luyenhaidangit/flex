@@ -20,6 +20,7 @@
   <ItemGroup>
     <Folder Include="Common\Helpers\" />
     <Folder Include="Customer\Enums\" />
+    <Folder Include="SystemManagement\User\Exceptions\" />
   </ItemGroup>
 
   <ItemGroup>

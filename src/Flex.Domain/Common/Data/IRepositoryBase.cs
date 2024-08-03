@@ -1,7 +1,11 @@
-﻿namespace Flex.Domain.Common.Data
+﻿using System.Linq.Expressions;
+
+namespace Flex.Domain.Common.Data
 {
     public interface IRepositoryBase<T> where T : class
-    {
+    {   // Query
+        Task<T> FindOneAsync(Expression<Func<T, bool>> predicate);
+
         /// <summary>
         /// Lấy tất cả các bản ghi
         /// </summary>

@@ -2,6 +2,8 @@
 using Microsoft.EntityFrameworkCore;
 using Serilog;
 using Swashbuckle.AspNetCore.Annotations;
+using System.Text;
+using System.Security.Cryptography;
 
 //Test
 namespace Flex.Api.Controllers
@@ -12,9 +14,13 @@ namespace Flex.Api.Controllers
     {
         private readonly ApplicationDbContext _context;
 
-        public WeatherForecastController(ApplicationDbContext context)
+        //public WeatherForecastController(ApplicationDbContext context)
+        //{
+        //    _context = context;
+        //}
+
+        public WeatherForecastController()
         {
-            _context = context;
         }
 
         [HttpGet("checkdatabase")]
@@ -82,6 +88,37 @@ namespace Flex.Api.Controllers
             }
 
             return orders;
+        }
+
+        private string GenEncryptPassword(string inputString)
+        {
+            if (string.IsNullOrEmpty(inputString))
+            {
+                return inputString;
+            }
+
+            using (MD5 md5 = MD5.Create())
+            {
+                byte[] inputBytes = Encoding.UTF8.GetBytes(inputString);
+                byte[] hashBytes = md5.ComputeHash(inputBytes);
+
+                // Convert the byte array to hexadecimal string
+                StringBuilder sb = new StringBuilder();
+                for (int i = 0; i < hashBytes.Length; i++)
+                {
+                    sb.Append(hashBytes[i].ToString("x2"));
+                }
+
+                return sb.ToString();
+            }
+        }
+
+        [HttpGet("demo")]
+        public IActionResult Test()
+        {
+            var test = GenEncryptPassword("123456");
+
+            return Ok(test);
         }
     }
 }
