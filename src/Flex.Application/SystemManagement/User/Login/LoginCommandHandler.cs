@@ -1,6 +1,6 @@
 ﻿using Flex.Domain.Common.Message;
 using Flex.Domain.Common.Shared;
-using Flex.Domain.Common.Abstractions.Services;
+using Flex.Domain.Common.Authentication;
 using Flex.Domain.SystemManagement.User.Abstractions;
 
 namespace Flex.Application.SystemManagement.User.Login
@@ -18,7 +18,7 @@ namespace Flex.Application.SystemManagement.User.Login
 
         public async Task<Result<LoginResponse>> Handle(LoginCommand command, CancellationToken cancellationToken)
         {
-            var user = await _tlProfilesRepository.FindOneAsync(x => x.TlName == command.Account);
+            var user = await _tlProfilesRepository.FindOneAsync(x => x.TlName == command.UserName);
 
             if(user is null)
             {

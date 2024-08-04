@@ -1,15 +1,18 @@
 using Serilog;
-using Flex.Api.Bootstrap.Options;
 using Flex.Api.Bootstrap.Extensions;
 using Flex.Api.Setup.Extensions;
 using Flex.Infrastructure.Setup.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
+SeriLoggerExtension.ConfigureLogger(builder.Configuration);
+
+Log.Information("Application starting up.");
+
 try
 {
     // Logging
-    builder.Host.UseSerilog(SeriLogger.Configure);
+    builder.Host.UseSerilog();
 
     // Add services to the container.
     // Swagger
@@ -35,8 +38,6 @@ try
 
     var app = builder.Build();
 
-    Log.Information("Application starting up");
-
     // Configure the HTTP request pipeline.
     if (app.Environment.IsDevelopment())
     {
@@ -54,16 +55,10 @@ try
 }
 catch (Exception ex)
 {
-    string typeException = ex.GetType().Name;
-    if (typeException.Equals("StopTheHostException", StringComparison.Ordinal))
-    {
-        throw;
-    }
-
-    Log.Fatal(ex, "Unhandled exception");
+    Log.Fatal(ex, "The application encountered a fatal error and will terminate.");
 }
 finally
 {
-    Log.Information("Shut down application complete");
+    Log.Information("Application is shutting down.");
     Log.CloseAndFlush();
 }

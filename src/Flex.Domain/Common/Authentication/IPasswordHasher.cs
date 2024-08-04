@@ -1,4 +1,4 @@
-﻿namespace Flex.Domain.Common.Abstractions.Services
+﻿namespace Flex.Domain.Common.Authentication
 {
     public interface IPasswordHasher
     {

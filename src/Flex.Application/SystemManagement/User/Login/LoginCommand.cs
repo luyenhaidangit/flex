@@ -2,5 +2,5 @@
 
 namespace Flex.Application.SystemManagement.User.Login
 {
-    public sealed record LoginCommand(string Account, string Password) : ICommand<LoginResponse>;
+    public sealed record LoginCommand(string UserName, string Password) : ICommand<LoginResponse>;
 }

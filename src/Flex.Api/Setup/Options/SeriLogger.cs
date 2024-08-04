@@ -1,6 +1,6 @@
 ﻿using Serilog;
 
-namespace Flex.Api.Bootstrap.Options
+namespace Flex.Api.Setup.Options
 {
     public class SeriLogger
     {
@@ -12,6 +12,8 @@ namespace Flex.Api.Bootstrap.Options
 
             configuration
                 .ReadFrom.Configuration(context.Configuration)
+                .MinimumLevel.Debug()
+                .Enrich.FromLogContext()
                 //.Enrich.WithMachineName()
                 //.Enrich.FromLogContext()
                 //.Enrich.WithThreadId()
@@ -19,7 +21,7 @@ namespace Flex.Api.Bootstrap.Options
                 //.Enrich.WithProperty("Application", applicationName)
                 .WriteTo.Async(a => a.Console(outputTemplate: "[{Timestamp:HH:mm:ss} {Level}] {SourceContext}{NewLine}{Message:lj}{NewLine}{Exception}{NewLine}"))
                 .WriteTo.Async(a => a.Debug(outputTemplate: "[{Timestamp:HH:mm:ss} {Level}] {SourceContext}{NewLine}{Message:lj}{NewLine}{Exception}{NewLine}"));
-                //.WriteTo.Async(a => a.File("logs/log-.txt", rollingInterval: RollingInterval.Day, outputTemplate: "[{Timestamp:HH:mm:ss} {Level}] {SourceContext}{NewLine}{Message:lj}{NewLine}{Exception}{NewLine}"))
+            //.WriteTo.Async(a => a.File("logs/log-.txt", rollingInterval: RollingInterval.Day, outputTemplate: "[{Timestamp:HH:mm:ss} {Level}] {SourceContext}{NewLine}{Message:lj}{NewLine}{Exception}{NewLine}"))
         };
     }
 }
