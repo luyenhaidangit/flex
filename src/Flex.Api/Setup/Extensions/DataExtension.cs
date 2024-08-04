@@ -1,13 +1,13 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
 using Oracle.ManagedDataAccess.Client;
 using Flex.Infrastructure.Data;
 using Flex.Domain.CorporateAction.Interfaces;
-using Flex.Infrastructure.Data.Repositories;
 using Flex.Domain.Common.Data;
+using Flex.Domain.SystemManagement.User.Abstractions;
+using Flex.Infrastructure.Data.Repositories;
+using Flex.Infrastructure.Data.Common;
 
-namespace Flex.Infrastructure.Setup.Extensions
+namespace Flex.Api.Setup.Extensions
 {
     public static class DataExtension
     {
@@ -15,7 +15,7 @@ namespace Flex.Infrastructure.Setup.Extensions
         {
             OracleConfiguration.SqlNetAllowedLogonVersionClient = OracleAllowedLogonVersionClient.Version11;
 
-            services.AddDbContext<ApplicationDbContext>(options =>
+            services.AddDbContext<Flex.Infrastructure.Data.ApplicationDbContext>(options =>
             options.UseOracle(configuration.GetConnectionString("OracleConnection")));
 
             return services;
@@ -23,14 +23,16 @@ namespace Flex.Infrastructure.Setup.Extensions
 
         public static IServiceCollection AddDapper(this IServiceCollection services, IConfiguration configuration)
         {
-            services.AddSingleton<ISqlConnectionFactory>(_ => new SqlConnectionFactory(configuration.GetConnectionString("OracleConnection")));
+            services.AddSingleton<ISqlConnectionFactory>(serviceProvider => new SqlConnectionFactory(configuration.GetConnectionString("OracleConnection")));
 
             return services;
         }
 
         public static IServiceCollection RegisterRepositories(this IServiceCollection services)
         {
+            services.AddScoped(typeof(IRepositoryBase<>), typeof(RepositoryBase<>));
             services.AddScoped<ICamastRepository, CamastRepository>();
+            services.AddScoped<ITlProfilesRepository, TlProfilesRepository>();
 
             return services;
         }

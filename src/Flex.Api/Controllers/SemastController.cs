@@ -8,21 +8,21 @@ namespace Flex.Api.Controllers
     [ApiController]
     public class SemastController : ControllerBase
     {
-        private readonly IMediator _mediator;
+        //private readonly IMediator _mediator;
 
-        public SemastController(IMediator mediator)
-        {
-            _mediator = mediator;
-        }
+        //public SemastController(IMediator mediator)
+        //{
+        //    _mediator = mediator;
+        //}
 
-        [HttpGet("get")]
-        public async Task<IActionResult> GetSemast([FromQuery] GetSemastRequest request, CancellationToken cancellationToken)
-        {
-            var query = new GetSemastQuery(request);
+        //[HttpGet("get")]
+        //public async Task<IActionResult> GetSemast([FromQuery] GetSemastRequest request, CancellationToken cancellationToken)
+        //{
+        //    var query = new GetSemastQuery(request);
 
-            var result = await _mediator.Send(query, cancellationToken);
+        //    var result = await _mediator.Send(query, cancellationToken);
 
-            return Ok(result);
-        }
+        //    return Ok(result);
+        //}
     }
 }

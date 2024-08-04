@@ -1,7 +1,6 @@
 using Serilog;
 using Flex.Api.Bootstrap.Extensions;
 using Flex.Api.Setup.Extensions;
-using Flex.Infrastructure.Setup.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -31,6 +30,7 @@ try
     builder.Services.AddMediaR();
 
     // Auth
+    builder.Services.AddAuthenticationContainer();
     builder.Services.AddJwtAuthentication(builder.Configuration);
 
     // Quartz

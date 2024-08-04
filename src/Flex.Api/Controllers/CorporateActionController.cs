@@ -8,21 +8,21 @@ namespace Flex.Api.Controllers
     [ApiController]
     public class CorporateActionController : ControllerBase
     {
-        private readonly IMediator _mediator;
+        //private readonly IMediator _mediator;
 
-        public CorporateActionController(IMediator mediator)
-        {
-            _mediator = mediator;
-        }
+        //public CorporateActionController(IMediator mediator)
+        //{
+        //    _mediator = mediator;
+        //}
 
-        [HttpGet("get")]
-        public async Task<IActionResult> GetCamast([FromQuery] GetCamastRequest request, CancellationToken cancellationToken)
-        {
-            var query = new GetCamastQuery(request);
+        //[HttpGet("get")]
+        //public async Task<IActionResult> GetCamast([FromQuery] GetCamastRequest request, CancellationToken cancellationToken)
+        //{
+        //    var query = new GetCamastQuery(request);
 
-            var result = await _mediator.Send(query, cancellationToken);
+        //    var result = await _mediator.Send(query, cancellationToken);
 
-            return Ok(result);
-        }
+        //    return Ok(result);
+        //}
     }
 }

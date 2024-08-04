@@ -10,12 +10,12 @@ namespace Flex.Api.Controllers.V1
     [ApiVersion("1.0")]
     public class AuthController : ControllerBase
     {
-        private readonly IMediator _mediator;
+        //private readonly IMediator _mediator;
 
-        public AuthController(IMediator mediator)
-        {
-            _mediator = mediator;
-        }
+        //public AuthController(IMediator mediator)
+        //{
+        //    _mediator = mediator;
+        //}
 
         //[HttpPost("login")]
         //public async Task<IActionResult> Login([FromBody] CreateCamastCommand command)
