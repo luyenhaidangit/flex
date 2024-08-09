@@ -8,8 +8,11 @@
 
   <ItemGroup>
     <Compile Remove="Entities\Security\**" />
+    <Compile Remove="SystemManagement\User\Exceptions\**" />
     <EmbeddedResource Remove="Entities\Security\**" />
+    <EmbeddedResource Remove="SystemManagement\User\Exceptions\**" />
     <None Remove="Entities\Security\**" />
+    <None Remove="SystemManagement\User\Exceptions\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -20,7 +23,6 @@
   <ItemGroup>
     <Folder Include="Common\Helpers\" />
     <Folder Include="Customer\Enums\" />
-    <Folder Include="SystemManagement\User\Exceptions\" />
   </ItemGroup>
 
   <ItemGroup>
