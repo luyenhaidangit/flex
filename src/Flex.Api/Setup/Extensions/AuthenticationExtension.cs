@@ -1,6 +1,6 @@
 ﻿using Flex.Domain.Common.Authentication;
+using Flex.Domain.Common.Section;
 using Flex.Infrastructure.Authentication;
-using System.Configuration;
 
 namespace Flex.Api.Setup.Extensions
 {
@@ -8,7 +8,7 @@ namespace Flex.Api.Setup.Extensions
     {
         public static IServiceCollection AddAuthenticationApplication(this IServiceCollection services, IConfiguration configuration)
         {
-            services.Configure<JwtOption>(configuration.GetSection("JwtToken"));
+            services.Configure<JwtOption>(configuration.GetSection(SectionKeyConstant.JwtToken));
             services.AddScoped<IPasswordHasher, PasswordHasher>();
             services.AddScoped<ITokenService, TokenService>();
 
