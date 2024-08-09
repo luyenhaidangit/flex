@@ -1,5 +1,5 @@
 ﻿using MediatR;
-using Flex.Domain.Common.Shared;
+using Flex.Domain.Common.Response;
 
 namespace Flex.Domain.Common.Message
 {

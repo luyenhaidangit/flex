@@ -3,6 +3,7 @@ using Flex.Api.Bootstrap.Extensions;
 using Flex.Api.Setup.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
+var configuration = builder.Configuration;
 
 SeriLoggerExtension.ConfigureLogger(builder.Configuration);
 
@@ -22,16 +23,15 @@ try
     builder.Services.AddControllers();
 
     // Data
-    builder.Services.AddEntityFrameworkCore(builder.Configuration);
-    builder.Services.AddDapper(builder.Configuration);
+    builder.Services.AddEntityFrameworkCore(configuration);
+    builder.Services.AddDapper(configuration);
     builder.Services.RegisterRepositories();
 
     // Lib
     builder.Services.AddMediaR();
 
     // Auth
-    builder.Services.AddAuthenticationContainer();
-    builder.Services.AddJwtAuthentication(builder.Configuration);
+    builder.Services.AddAuthenticationApplication(configuration);
 
     // Quartz
     builder.Services.AddQuartzApplication();

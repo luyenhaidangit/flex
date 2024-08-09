@@ -1,7 +1,9 @@
-﻿using Flex.Domain.Common.Authentication;
+﻿using System.Text;
 using Microsoft.Extensions.Options;
+using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
+using Flex.Domain.Common.Authentication;
 
 namespace Flex.Infrastructure.Authentication
 {
@@ -14,11 +16,24 @@ namespace Flex.Infrastructure.Authentication
             _jwtOption = jwtOption.Value;
         }
 
-        public JwtSecurityToken GenerateToken(List<Claim> claims)
+        public string GenerateToken(List<Claim> claims)
         {
-            //if (_jwtOption.Key is null || _jwtOption.Issuer is null || _jwtOption.Audience is null || _jwtOption.ExpiryMinutes.HasValue)
+            var issuer = _jwtOption.Issuer;
+            var audience = _jwtOption.Audience;
+            var creds = new SigningCredentials(new SymmetricSecurityKey(Encoding.ASCII.GetBytes(_jwtOption.Key)), SecurityAlgorithms.HmacSha256);
+            var expires = DateTime.UtcNow.AddMinutes(_jwtOption.ExpiryMinutes);
 
-                return null;
+            var token = new JwtSecurityToken(
+               issuer: issuer,
+               audience: audience,
+               expires: expires,
+               signingCredentials: creds,
+               claims: claims
+            );
+
+            var tokenString = new JwtSecurityTokenHandler().WriteToken(token);
+
+            return tokenString;
         }
     }
 }

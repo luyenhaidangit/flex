@@ -1,8 +1,8 @@
-﻿using Flex.Domain.Common.Message;
-using Flex.Domain.Common.Shared;
+﻿using System.Security.Claims;
+using Flex.Domain.Common.Message;
 using Flex.Domain.Common.Authentication;
 using Flex.Domain.SystemManagement.User.Abstractions;
-using Flex.Common.Extensions;
+using Flex.Domain.Common.Response;
 
 namespace Flex.Application.SystemManagement.User.Login
 {
@@ -10,11 +10,13 @@ namespace Flex.Application.SystemManagement.User.Login
     {
         private readonly ITlProfilesRepository _tlProfilesRepository;
         private readonly IPasswordHasher _passwordHasher;
+        private readonly ITokenService _tokenService;
 
-        public LoginCommandHandler(ITlProfilesRepository tlProfilesRepository, IPasswordHasher passwordHasher)
+        public LoginCommandHandler(ITlProfilesRepository tlProfilesRepository, IPasswordHasher passwordHasher, ITokenService tokenService)
         {
             _tlProfilesRepository = tlProfilesRepository;
             _passwordHasher = passwordHasher;
+            _tokenService = tokenService;
         }
 
         public async Task<Result<LoginResponse>> Handle(LoginCommand command, CancellationToken cancellationToken)
@@ -33,15 +35,22 @@ namespace Flex.Application.SystemManagement.User.Login
                 throw new ArgumentNullException("Mật khẩu không chính xác!");
             }
 
+            var claims = new List<Claim> 
+            {
+                new Claim(ClaimKeyConstant.Username,user.TlName)
+            };
+
+            var token = _tokenService.GenerateToken(claims);
+
             var loginResponse = new LoginResponse()
             {
-                AccessToken = user.Pin
+                AccessToken = token
             };
 
             var result = new Result<LoginResponse>()
             {
                 Data = loginResponse,
-                Message = "Done",
+                Message = MessageConstant.Success,
                 Success = true
             };
 

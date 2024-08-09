@@ -5,6 +5,6 @@ namespace Flex.Domain.Common.Authentication
 {
     public interface ITokenService
     {
-        JwtSecurityToken GenerateToken(List<Claim> claims);
+        string GenerateToken(List<Claim> claims);
     }
 }

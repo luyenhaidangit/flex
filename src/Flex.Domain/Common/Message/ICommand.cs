@@ -1,4 +1,4 @@
-﻿using Flex.Domain.Common.Shared;
+﻿using Flex.Domain.Common.Response;
 using MassTransit;
 using MediatR;
 

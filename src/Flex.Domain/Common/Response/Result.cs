@@ -1,6 +1,6 @@
 ﻿//using System.Diagnostics.CodeAnalysis;
 
-namespace Flex.Domain.Common.Shared
+namespace Flex.Domain.Common.Response
 {
     public class Result
     {
